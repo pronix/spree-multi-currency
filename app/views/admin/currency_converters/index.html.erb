@@ -1,0 +1,38 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li>
+      <p><%= button_link_to t("add_currency_converter"), new_object_url, :icon => 'add' %></p>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+<h1><%= t("currency_converter") %></h1>
+
+<table class="index">
+  <thead>
+	<tr>
+    <th><%= t("currency_converter_date_req") %></th>
+    <th><%= t("currency_converter_currency") %></th>
+    <th><%= t("currency_converter_nominal") %></th>
+    <th><%= t("currency_converter_value") %></th>
+    <th><%= t("action") %></th>
+	</tr>
+  </thead>
+  <tbody>
+    <% collection.each do |currency_converter|%>
+    <tr id="<%= dom_id currency_converter %>">
+      <td><%=  currency_converter.date_req %></td>
+      <td width="350px"><%= currency_converter.currency.try(:name) %></td>
+      <td><%=  currency_converter.nominal %></td>
+      <td><%=  currency_converter.value %></td>
+      <td>
+      	<%= link_to_edit currency_converter %> &nbsp;
+	      <%= link_to_delete currency_converter %> &nbsp;
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") %>
+

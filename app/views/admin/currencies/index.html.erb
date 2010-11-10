@@ -1,0 +1,40 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li>
+      <p><%= button_link_to t("add_currency"), new_object_url, :icon => 'add' %></p>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+<h1><%= t("list_currency") %></h1>
+
+<table class="index">
+  <thead>
+	<tr>
+    <th><%= t("currency_name")%></th>
+    <th><%= t("currency_code")%></th>
+    <th><%= t("currency_locale")%></th>
+    <th><%= t("currency_basic")%></th>
+    <th><%= t("action") %></th>
+	</tr>
+  </thead>
+  <tbody>
+    <% collection.each do |currency|%>
+    <tr id="<%= dom_id currency %>">
+      <td width="350px"><%= currency.name %></td>
+      <td>
+        <%= currency.num_code %> - <%= currency.char_code %>
+      </td>
+      <td> <%= currency.locale %></td>
+      <td> <%= currency.basic %></td>
+      <td>
+      	<%= link_to_edit currency %> &nbsp;
+	      <%= link_to_delete currency %> &nbsp;
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%#= will_paginate(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") %>
+

@@ -1,0 +1,40 @@
+<table>
+  <tr>
+    <td><%= t("currency_name") %>: </td>
+    <td>
+      <%= error_message_on :currency, :name %>
+      <%= f.text_field :name  %>
+    </td>
+  </tr>
+  <tr>
+    <td><%= t("currency_num_code") %>: </td>
+    <td>
+      <%= error_message_on :currency, :num_code %>
+      <%= f.text_field :num_code  %>
+    </td>
+  </tr>
+  <tr>
+    <td><%= t("currency_char_code") %>: </td>
+    <td>
+      <%= error_message_on :currency, :char_code %>
+      <%= f.text_field :char_code  %>
+    </td>
+  </tr>
+
+  <tr>
+    <td><%= t("currency_basic") %>: </td>
+    <td>
+      <%= error_message_on :currency, :basic %>
+      <%= f.check_box :basic  %>
+    </td>
+  </tr>
+  <tr>
+    <td><%= t("currency_locale") %>: </td>
+    <td>
+      <%= error_message_on :currency, :locale %>
+      <%= f.select :locale, AVAILABLE_LOCALES.map{|x| [ "#{x[1]} (#{x[0]})", x[0]]}  %>
+    </td>
+  </tr>
+
+</table>
+

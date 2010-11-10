@@ -1,0 +1,24 @@
+---
+ru-RU:
+  currency_settings: Валюты
+  currency_converters_settings: Курсы валют
+  currency_description: Настройка справочника валют
+  currency_converters_description: Настройка справочника курса валют
+  add_currency_converter: Добавить курс
+  currency_converter: Курсы валют
+  currency_converter_date_req: Дата
+  currency_converter_currency: Валюта
+  currency_converter_nominal: Номинал
+  currency_converter_value: Значение
+  new_currency_converter: Новый курс валюты
+  editing_currency_converter: Редактирование курса валюты
+  add_currency: Добавить валюту
+  list_currency: Список валют
+  currency_name: Валюта
+  currency_code: Код
+  currency_num_code: Цифровой код
+  currency_char_code: Строковый код
+  currency_locale: Локаль
+  currency_basic: Основная
+  editing_currency: Редактирование валюты
+  new_currency: Добавление валюты

@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td><%= t("currency_converter_currency") %>: </td>
+    <td>
+      <%= error_message_on :currency_converter, :currency_id %>
+      <%= f.select :currency_id, Currency.all.map{|x| [x.name, x.id]}  %>
+    </td>
+  </tr>
+
+  <tr>
+    <td><%= t("currency_converter_date_req") %>: </td>
+    <td>
+      <%= error_message_on :currency_converter, :date_req %>
+      <%= f.datetime_select :date_req  %>
+    </td>
+  </tr>
+
+  <tr>
+    <td><%= t("currency_converter_nominal") %>: </td>
+    <td>
+      <%= error_message_on :currency_converter, :nominal %>
+      <%= f.text_field :nominal  %>
+    </td>
+  </tr>
+
+  <tr>
+    <td><%= t("currency_converter_value") %>: </td>
+    <td>
+      <%= error_message_on :currency_converter, :value %>
+      <%= f.text_field :value  %>
+    </td>
+  </tr>
+
+</table>
+
