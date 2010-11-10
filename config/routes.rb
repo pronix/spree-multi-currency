@@ -1,6 +1,7 @@
 # Put your extension routes here.
-
-map.namespace :admin do |admin|
-  admin.resources :currencies
-  admin.resources :currency_converters
+Rails.application.routes.draw do
+  namespace :admin do
+    resources :currencies
+    resources :currency_converters
+  end
 end

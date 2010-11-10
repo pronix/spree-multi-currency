@@ -32,7 +32,7 @@
     <td><%= t("currency_locale") %>: </td>
     <td>
       <%= error_message_on :currency, :locale %>
-      <%= f.select :locale, AVAILABLE_LOCALES.map{|x| [ "#{x[1]} (#{x[0]})", x[0]]}  %>
+      <%= f.select :locale, I18n.available_locales.map{|x| [x,x] }  %>
     </td>
   </tr>
 

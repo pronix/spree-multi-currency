@@ -1,4 +1,3 @@
-<%= error_messages_for :currency_converter %>
 <h1><%= t("editing_currency_converter") %></h1>
 <% form_for(:currency_converter, :url => object_url, :html => { :method => :put }) do |f| %>
 <%= render :partial => "form", :locals => { :f => f } %>

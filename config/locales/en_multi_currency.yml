@@ -1,0 +1,24 @@
+---
+en:
+  currency_settings: Currency Settings
+  currency_converters_settings: Currency Converters
+  currency_description: Reference Currency
+  currency_converters_description: Currency Exchange Rates
+  add_currency_converter: Add currency exchange rate
+  currency_converter: Currency Converter
+  currency_converter_date_req: Date
+  currency_converter_currency: Currency
+  currency_converter_nominal: Nominal
+  currency_converter_value: Value
+  new_currency_converter: New
+  editing_currency_converter: Edit
+  add_currency: Add currency
+  list_currency: List of currencies
+  currency_name: Currency
+  currency_code: Code
+  currency_num_code: ISO number code
+  currency_char_code: ISO char code
+  currency_locale: Locale
+  currency_basic: Basic currency
+  editing_currency: EDit
+  new_currency: Add
