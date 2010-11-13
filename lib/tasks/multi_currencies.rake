@@ -1,10 +1,10 @@
 # add custom rake tasks here
 namespace :multi_currencies do
-  desc "Получение валют"
-  task :currency => :environment do
+  desc "Получение валют Сбербанк РФ"
+  task :currency_sb => :environment do
     require 'open-uri'
     doc = Nokogiri::XML.parse(open("http://www.cbr.ru/scripts/XML_daily.asp?date_req=#{Time.now.strftime('%d/%m/%Y')}"))
-    date = Date.parse doc.xpath("//ValCurs").attr("Date").to_s
+    date = Date.strptime(doc.xpath("//ValCurs").attr("Date").to_s, '%d/%m/%Y')
     doc.xpath("//ValCurs/Valute").each do |valute|
       char_code  = valute.xpath("./CharCode").text.to_s
       num_code   = valute.xpath("./NumCode").text.to_s
