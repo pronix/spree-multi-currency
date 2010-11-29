@@ -15,7 +15,7 @@ class Currency < ActiveRecord::Base
       return price if current(_locale).nil? || current(_locale).basic?
       current_currency = current(_locale).currency_converters.last(:conditions => ["date_req <= ?", _date])
       return price if current_currency.blank?
-      (price / current_currency.value.to_f) * current_currency.nominal.to_i
+      (price.to_f / current_currency.value.to_f) * current_currency.nominal.to_i
     end
 
     # Конвертируем значение из валюты текущей локали к основной валюте
@@ -28,7 +28,7 @@ class Currency < ActiveRecord::Base
       return value if current(_locale).nil? || current(_locale).basic?
       current_currency = current(_locale).currency_converters.last(:conditions => ["date_req <= ?", _date])
       return value if current_currency.blank?
-      return (value/current_currency.nominal.to_f)*current_currency.value
+      return (value.to_f / current_currency.nominal.to_f ) * current_currency.value
     end
 
     # Основная валюта
