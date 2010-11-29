@@ -11,7 +11,7 @@
     <td><%= t("currency_converter_date_req") %>: </td>
     <td>
       <%= error_message_on :currency_converter, :date_req %>
-      <%= f.datetime_select :date_req  %>
+      <%= f.spree_date_picker :date_req  %>
     </td>
   </tr>
 
