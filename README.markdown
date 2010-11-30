@@ -9,6 +9,7 @@ Add to Gemfile
 
 Run
     rake multi_currencies:install:migrations
+    rake db:migrate
 
 Settings
 ---------
