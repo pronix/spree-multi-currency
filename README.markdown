@@ -1,11 +1,14 @@
 = Multi Currency
 
-Support different currency and recalculate price from one to othe
+Support different currency and recalculate price from one to another
 ===========================================
 Installation
 ---------
-       Gemfile
-       gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
+Add to Gemfile
+    gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
+
+Run
+    rake multi_currencies:install:migrations
 
 Settings
 ---------
