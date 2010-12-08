@@ -10,6 +10,7 @@ class Currency < ActiveRecord::Base
     # Если валюта или локаль не найдена то возвращается та же сумма
     #
     def conversion_to_current(price, options = { })
+      return price if price.to_f <= 0.0
       _locale = options[:locale] || I18n.locale
       _date = options[:date] || Time.now
       return price if current(_locale).nil? || current(_locale).basic?
@@ -23,6 +24,7 @@ class Currency < ActiveRecord::Base
     # и дату курса :date, курс берется последний найденный до указанной даты
     #
     def conversion_from_current(value, options={})
+      return value if value.to_f <= 0.0
       _locale = options[:locale] || I18n.locale
       _date = options[:date] || Time.now
       return value if current(_locale).nil? || current(_locale).basic?
