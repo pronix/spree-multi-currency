@@ -10,13 +10,11 @@ class Currency < ActiveRecord::Base
     # Если валюта или локаль не найдена то возвращается та же сумма
     #
     def conversion_to_current(price, options = { })
-      return price if price.to_f <= 0.0
-      _locale = options[:locale] || I18n.locale
-      _date = options[:date] || Time.now
-      return price if current(_locale).nil? || current(_locale).basic?
-      current_currency = current(_locale).currency_converters.last(:conditions => ["date_req <= ?", _date])
-      return price if current_currency.blank?
-      (price.to_f / current_currency.value.to_f) * current_currency.nominal.to_i
+      if current_currency = check_current_currency(value, options)
+        (price.to_f / current_currency.value.to_f) * current_currency.nominal.to_i
+      else
+        price
+      end
     end
 
     # Конвертируем значение из валюты текущей локали к основной валюте
@@ -24,13 +22,20 @@ class Currency < ActiveRecord::Base
     # и дату курса :date, курс берется последний найденный до указанной даты
     #
     def conversion_from_current(value, options={})
-      return value if value.to_f <= 0.0
-      _locale = options[:locale] || I18n.locale
-      _date = options[:date] || Time.now
-      return value if current(_locale).nil? || current(_locale).basic?
-      current_currency = current(_locale).currency_converters.last(:conditions => ["date_req <= ?", _date])
-      return value if current_currency.blank?
-      return (value.to_f / current_currency.nominal.to_f ) * current_currency.value
+      if current_currency = check_current_currency(value, options)
+        (value.to_f / current_currency.nominal.to_f ) * current_currency.value
+      else
+        value
+      end
+    end
+
+
+    def check_current_currency(value, options)
+      return nil if value.to_f <= 0.0
+      @locale, @date = (options[:locale] || I18n.locale), (options[:date] || Time.now)
+      return nil if current(@locale).nil? || current(@locale).basic?
+      current_currency = current(@locale).currency_converters.last(:conditions => ["date_req <= ?", @date])
+      current_currency.blank? ? nil : current_currency
     end
 
     # Основная валюта
