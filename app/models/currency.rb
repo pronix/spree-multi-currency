@@ -9,11 +9,11 @@ class Currency < ActiveRecord::Base
     # Конвертируем сумму к валюте текущей локале
     # Если валюта или локаль не найдена то возвращается та же сумма
     #
-    def conversion_to_current(price, options = { })
+    def conversion_to_current(value, options = { })
       if current_currency = check_current_currency(value, options)
-        (price.to_f / current_currency.value.to_f) * current_currency.nominal.to_i
+        (value.to_f / current_currency.value.to_f) * current_currency.nominal.to_i
       else
-        price
+        value
       end
     end
 
