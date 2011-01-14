@@ -1,5 +1,9 @@
 class Currency < ActiveRecord::Base
   has_many :currency_converters
+
+  def basic!
+    update_attribute(:basic, true)
+  end
   class << self
     # Текущая валюта определенная по текущей локали
     def current(_locale=I18n.locale)
@@ -8,6 +12,7 @@ class Currency < ActiveRecord::Base
 
     # Конвертируем сумму к валюте текущей локале
     # Если валюта или локаль не найдена то возвращается та же сумма
+    # Money.new(value.to_f, "Основаня").exchange_to("К Текущей").to_f
     #
     def conversion_to_current(value, options = { })
       if current_currency = check_current_currency(value, options)
@@ -20,6 +25,7 @@ class Currency < ActiveRecord::Base
     # Конвертируем значение из валюты текущей локали к основной валюте
     # в параметрах можно указать локаль из которой можно делать конвертацияю :locale
     # и дату курса :date, курс берется последний найденный до указанной даты
+    # Money.new(value.to_f, "Текущая локаль").exchange_to("К Основной").to_f
     #
     def conversion_from_current(value, options={})
       if current_currency = check_current_currency(value, options)
@@ -47,4 +53,5 @@ class Currency < ActiveRecord::Base
       find_by_num_code(num_code) || create(options)
     end
   end
+
 end
