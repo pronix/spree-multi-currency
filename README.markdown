@@ -8,17 +8,20 @@ Add to Gemfile
     gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
 
 Run
+---
     rake multi_currencies:install:migrations
     rake db:migrate
 
 Load currencies:
+---------------
     rake multi_currencies:currency:iso4217         # Load currency ISO4217 http://en.wikipedia.org/wiki/ISO_4217
     rake multi_currencies:currency:okv             # Общероссийский классификатор валют...
 
 Load rates:
-  rake multi_currencies:rates:cbr                               # Курс Сбербанка РФ http://www.cbr.ru
-  rake "multi_currencies:rates:ecb[load_currencies]"              # Rates from European Central Bank
-  rake "multi_currencies:rates:google[currency,load_currencies]"  # Rates from Google
+----------
+    rake multi_currencies:rates:cbr                               # Курс Сбербанка РФ http://www.cbr.ru
+    rake "multi_currencies:rates:ecb[load_currencies]"              # Rates from European Central Bank
+    rake "multi_currencies:rates:google[currency,load_currencies]"  # Rates from Google
 
 
 Settings
