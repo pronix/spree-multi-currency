@@ -39,7 +39,7 @@ namespace :multi_currencies do
       url = "http://www.cbr.ru/scripts/XML_daily.asp?date_req=#{Time.now.strftime('%d/%m/%Y')}"
       data = Nokogiri::XML.parse(open(url))
       date = Date.strptime(data.xpath("//ValCurs").attr("Date").to_s, '%d/%m/%Y')
-      doc.xpath("//ValCurs/Valute").each do |valute|
+      data.xpath("//ValCurs/Valute").each do |valute|
         char_code  = valute.xpath("./CharCode").text.to_s
         num_code   = valute.xpath("./NumCode").text.to_s
         name       = valute.xpath("./Name").text.to_s
