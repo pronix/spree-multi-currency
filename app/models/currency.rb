@@ -7,31 +7,47 @@ class Currency < ActiveRecord::Base
     end
   end
 
-  # cattr_accessor :current
+  default_scope :order => "currencies.locale"
   scope :locale, lambda{|str| where("locale like ?", "%#{str}%")}
+  after_save :reset_basic_currency
 
   def basic!
     self.class.update_all(:basic => false) && update_attribute(:basic, true)
   end
 
+  def locale=(locales)
+    write_attribute(:locale, [locales].flatten.compact.join(','))
+  end
+
+  def locale(need_split = true)
+    need_split ? read_attribute(:locale).to_s.split(',') : read_attribute(:locale).to_s
+  end
+
+  # Сбрасываем для всех валют флаг "оснавная", кроме текущей если она установлена как основная
+  #
+  def reset_basic_currency
+    self.class.where("id != ?", self.id).update_all(:basic => false) if self.basic?
+  end
+
   class << self
 
+    # Текущая валюта
+    #
+    def current(current_locale = I18n.locale )
+      @current ||= locale(current_locale).first
+    end
+
+    def current!(current_locale = I18n.locale )
+      @current = locale(current_locale).first
+    end
+
     def load_rate(options= {})
-      @_locale    = options[:locale]  || I18n.locale
-      @_date_rate = options[:date]    || Time.now
-      @basic      ||= basic
-      @current    ||= locale(@_locale).first
+      current(options[:locale] || I18n.locale)
+      basic
 
-      unless Money.default_bank.get_rate(@basic.char_code, @current.char_code)
-        if @rate = @current.currency_converters.get_rate(@_date_rate)
-          Money.add_rate(@basic.char_code, @current.char_code, @rate.nominal/@rate.value.to_f )
-        end
-      end
-
-      unless Money.default_bank.get_rate(@current.char_code, @basic.char_code)
-        if @rate = @current.currency_converters.get_rate(@_date_rate)
-          Money.add_rate(@current.char_code, @basic.char_code, @rate.value.to_f )
-        end
+      if @rate = @current.currency_converters.get_rate(options[:date] || Time.now)
+        add_rate(@basic.char_code,   @current.char_code, @rate.nominal/@rate.value.to_f)
+        add_rate(@current.char_code, @basic.char_code,   @rate.value.to_f)
       end
 
     end
@@ -62,12 +78,18 @@ class Currency < ActiveRecord::Base
     # Основная валюта
     def basic
       @basic ||= first(:conditions => { :basic => true })
-      @basic
-    end
+     end
 
     def get(num_code, options ={ })
       find_by_num_code(num_code) || create(options)
     end
-  end
+
+    private
+
+    def add_rate(from, to, rate)
+      Money.add_rate(from, to, rate.to_f ) unless Money.default_bank.get_rate(from, to)
+    end
+
+  end # end class << self
 
 end
