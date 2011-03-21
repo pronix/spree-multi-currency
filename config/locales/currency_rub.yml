@@ -1,0 +1,10 @@
+---
+currency_RUB:
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "руб."
+        separator: "."
+        delimiter: " "
+        precision: 2

@@ -23,7 +23,7 @@ class Currency < ActiveRecord::Base
     need_split ? read_attribute(:locale).to_s.split(',') : read_attribute(:locale).to_s
   end
 
-  # Сбрасываем для всех валют флаг "оснавная", кроме текущей если она установлена как основная
+  # Сбрасываем для всех валют флаг "основная", кроме текущей если она установлена как основная
   #
   def reset_basic_currency
     self.class.where("id != ?", self.id).update_all(:basic => false) if self.basic?
@@ -35,10 +35,11 @@ class Currency < ActiveRecord::Base
     #
     def current(current_locale = I18n.locale )
       @current ||= locale(current_locale).first
+      @current
     end
 
-    def current!(current_locale = I18n.locale )
-      @current = locale(current_locale).first
+    def current!(current_locale = nil )
+      @current = current_locale.is_a?(Currency) ? current_locale : locale(current_locale||I18n.locale).first
     end
 
     def load_rate(options= {})

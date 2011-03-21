@@ -1,5 +1,7 @@
 ---
 en:
+  currency_changed: Currency changed
+  currency_not_found: Currency not found
   currency_settings: Currency Settings
   currency_converters_settings: Currency Converters
   currency_description: Reference Currency

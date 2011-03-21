@@ -1,5 +1,7 @@
 ---
 ru:
+  currency_changed: Валюта изменена
+  currency_not_found: Валюта не найдена
   currency_settings: Валюты
   currency_converters_settings: Курсы валют
   currency_description: Настройка справочника валют
