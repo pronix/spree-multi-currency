@@ -1,23 +1,29 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'multi_currencies'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.summary     = 'Add gem summary here'
-  #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
+  s.authors     = ["Maxim"]
+  s.email       = ["parallel588@gmail.com"]
+  s.homepage    = ""
+  s.summary     = %q{spree-multi-currency}
+  s.description = %q{spree-multi-currency}
 
-  # s.author            = ''
-  # s.email             = ''
-  # s.homepage          = ''
-  # s.rubyforge_project = ''
+  s.rubyforge_project = "spree-multi-currency"
 
-  s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*']
-  s.require_path = 'lib'
-  s.requirements << 'none'
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
-  s.has_rdoc = true
+  s.require_path = ['lib']
+
 
   s.add_dependency('spree_core', '>= 0.30.0')
-  s.add_dependency('nokogiri',   '>= 1.4.3.1')
-  s.add_dependency('money',      '>= 3.5.4')
+  s.add_dependency('nokogiri',   '>= 1.4.4')
+  s.add_dependency('money',      '>= 3.6.1')
+  s.add_dependency('json',       '>= 1.5.1')
 end
