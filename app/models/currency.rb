@@ -54,7 +54,7 @@ class Currency < ActiveRecord::Base
     end
 
     def convert(value, from, to)
-      Money.new(value.to_f * 100, from).exchange_to(to).to_f
+      ( Money.new(value.to_f * 10000, from).exchange_to(to).to_f / 100).round(2)
     end
 
     # Конвертируем сумму к валюте текущей локале
