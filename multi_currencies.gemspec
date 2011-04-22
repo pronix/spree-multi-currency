@@ -26,4 +26,6 @@ Gem::Specification.new do |s|
   s.add_dependency('nokogiri',   '>= 1.4.4')
   s.add_dependency('money',      '>= 3.6.1')
   s.add_dependency('json',       '>= 1.5.1')
+
+  s.add_development_dependency("rspec", ">= 2.5.0")
 end
