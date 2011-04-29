@@ -1,0 +1,689 @@
+--- 
+currency_converters_67: 
+  created_at: 2011-04-29 09:28:45.352627
+  currency_id: 123
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:45.352627
+  id: 67
+  value: 0.036361
+  nominal: 1.0
+currency_converters_8: 
+  created_at: 2011-04-29 09:27:55.005521
+  currency_id: 19
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:55.005521
+  id: 8
+  value: 0.142653
+  nominal: 1.0
+currency_converters_24: 
+  created_at: 2011-04-29 09:28:11.115197
+  currency_id: 52
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:11.115197
+  id: 24
+  value: 1.6641
+  nominal: 1.0
+currency_converters_9: 
+  created_at: 2011-04-29 09:27:55.806072
+  currency_id: 21
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:55.806072
+  id: 9
+  value: 0.632511
+  nominal: 1.0
+currency_converters_25: 
+  created_at: 2011-04-29 09:28:14.365137
+  currency_id: 60
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:14.365137
+  id: 25
+  value: 0.128722
+  nominal: 1.0
+currency_converters_46: 
+  created_at: 2011-04-29 09:28:30.595106
+  currency_id: 92
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:30.595106
+  id: 46
+  value: 0.08674
+  nominal: 1.0
+currency_converters_70: 
+  created_at: 2011-04-29 09:28:48.675022
+  currency_id: 129
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:48.675022
+  id: 70
+  value: 0.166254
+  nominal: 1.0
+currency_converters_68: 
+  created_at: 2011-04-29 09:28:46.205456
+  currency_id: 125
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:46.205456
+  id: 68
+  value: 0.266667
+  nominal: 1.0
+currency_converters_26: 
+  created_at: 2011-04-29 09:28:14.764040
+  currency_id: 61
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:14.764040
+  id: 26
+  value: 0.052938
+  nominal: 1.0
+currency_converters_47: 
+  created_at: 2011-04-29 09:28:31.674937
+  currency_id: 94
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:31.674937
+  id: 47
+  value: 0.024128
+  nominal: 1.0
+currency_converters_71: 
+  created_at: 2011-04-29 09:28:49.212568
+  currency_id: 130
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:49.212568
+  id: 71
+  value: 0.813802
+  nominal: 1.0
+currency_converters_69: 
+  created_at: 2011-04-29 09:28:47.652723
+  currency_id: 127
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:47.652723
+  id: 69
+  value: 0.083144
+  nominal: 1.0
+currency_converters_27: 
+  created_at: 2011-04-29 09:28:15.145162
+  currency_id: 62
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:15.145162
+  id: 27
+  value: 0.201329
+  nominal: 1.0
+currency_converters_50: 
+  created_at: 2011-04-29 09:28:37.034979
+  currency_id: 104
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:37.034979
+  id: 50
+  value: 0.337268
+  nominal: 1.0
+currency_converters_48: 
+  created_at: 2011-04-29 09:28:35.034962
+  currency_id: 99
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:35.034962
+  id: 48
+  value: 0.036364
+  nominal: 1.0
+currency_converters_72: 
+  created_at: 2011-04-29 09:28:50.485339
+  currency_id: 132
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:50.485339
+  id: 72
+  value: 0.00023
+  nominal: 1.0
+currency_converters_30: 
+  created_at: 2011-04-29 09:28:17.055063
+  currency_id: 66
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:17.055063
+  id: 30
+  value: 0.294551
+  nominal: 1.0
+currency_converters_28: 
+  created_at: 2011-04-29 09:28:16.005160
+  currency_id: 64
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:16.005160
+  id: 28
+  value: 0.005613
+  nominal: 1.0
+currency_converters_51: 
+  created_at: 2011-04-29 09:28:37.835453
+  currency_id: 106
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:37.835453
+  id: 51
+  value: 0.150716
+  nominal: 1.0
+currency_converters_49: 
+  created_at: 2011-04-29 09:28:36.214907
+  currency_id: 102
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:36.214907
+  id: 49
+  value: 0.086539
+  nominal: 1.0
+currency_converters_73: 
+  created_at: 2011-04-29 09:28:53.875284
+  currency_id: 138
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:53.875284
+  id: 73
+  value: 0.033434
+  nominal: 1.0
+currency_converters_10: 
+  created_at: 2011-04-29 09:27:57.025183
+  currency_id: 24
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:57.025183
+  id: 10
+  value: 0.1564
+  nominal: 1.0
+currency_converters_31: 
+  created_at: 2011-04-29 09:28:17.474924
+  currency_id: 67
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:17.474924
+  id: 31
+  value: 0.022538
+  nominal: 1.0
+currency_converters_29: 
+  created_at: 2011-04-29 09:28:16.655086
+  currency_id: 65
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:16.655086
+  id: 29
+  value: 0.000117
+  nominal: 1.0
+currency_converters_52: 
+  created_at: 2011-04-29 09:28:38.212755
+  currency_id: 107
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:38.212755
+  id: 52
+  value: 0.006479
+  nominal: 1.0
+currency_converters_74: 
+  created_at: 2011-04-29 09:28:57.869442
+  currency_id: 141
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:57.869442
+  id: 74
+  value: 0.74228
+  nominal: 1.0
+currency_converters_11: 
+  created_at: 2011-04-29 09:27:58.425190
+  currency_id: 27
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:58.425190
+  id: 11
+  value: 1.05152
+  nominal: 1.0
+currency_converters_32: 
+  created_at: 2011-04-29 09:28:19.505159
+  currency_id: 70
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:19.505159
+  id: 32
+  value: 0.005508
+  nominal: 1.0
+currency_converters_53: 
+  created_at: 2011-04-29 09:28:38.602972
+  currency_id: 108
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:38.602972
+  id: 53
+  value: 0.044984
+  nominal: 1.0
+currency_converters_75: 
+  created_at: 2011-04-29 09:28:59.707345
+  currency_id: 143
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:59.707345
+  id: 75
+  value: 0.655824
+  nominal: 1.0
+currency_converters_33: 
+  created_at: 2011-04-29 09:28:20.024894
+  currency_id: 71
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:20.024894
+  id: 33
+  value: 0.01174
+  nominal: 1.0
+currency_converters_54: 
+  created_at: 2011-04-29 09:28:38.974971
+  currency_id: 109
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:38.974971
+  id: 54
+  value: 0.190578
+  nominal: 1.0
+currency_converters_12: 
+  created_at: 2011-04-29 09:28:00.263083
+  currency_id: 30
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:00.263083
+  id: 12
+  value: 1.14561
+  nominal: 1.0
+currency_converters_76: 
+  created_at: 2011-04-29 09:29:00.718944
+  currency_id: 144
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:00.718944
+  id: 76
+  value: 0.15674
+  nominal: 1.0
+currency_converters_55: 
+  created_at: 2011-04-29 09:28:39.365099
+  currency_id: 110
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:39.365099
+  id: 55
+  value: 0.014067
+  nominal: 1.0
+currency_converters_34: 
+  created_at: 2011-04-29 09:28:20.425162
+  currency_id: 72
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:20.425162
+  id: 34
+  value: 1.41303
+  nominal: 1.0
+currency_converters_77: 
+  created_at: 2011-04-29 09:29:01.640843
+  currency_id: 145
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:01.640843
+  id: 77
+  value: 0.034874
+  nominal: 1.0
+currency_converters_13: 
+  created_at: 2011-04-29 09:28:01.847401
+  currency_id: 33
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:01.847401
+  id: 13
+  value: 0.002171
+  nominal: 1.0
+currency_converters_56: 
+  created_at: 2011-04-29 09:28:39.755272
+  currency_id: 111
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:39.755272
+  id: 56
+  value: 0.8001
+  nominal: 1.0
+currency_converters_78: 
+  created_at: 2011-04-29 09:29:02.117576
+  currency_id: 146
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:02.117576
+  id: 78
+  value: 0.000664
+  nominal: 1.0
+currency_converters_14: 
+  created_at: 2011-04-29 09:28:02.264937
+  currency_id: 34
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:02.264937
+  id: 14
+  value: 0.153822
+  nominal: 1.0
+currency_converters_35: 
+  created_at: 2011-04-29 09:28:20.822650
+  currency_id: 73
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:20.822650
+  id: 35
+  value: 0.012268
+  nominal: 1.0
+currency_converters_80: 
+  created_at: 2011-04-29 09:29:02.912283
+  currency_id: 148
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:02.912283
+  id: 80
+  value: 0.000421
+  nominal: 1.0
+currency_converters_15: 
+  created_at: 2011-04-29 09:28:02.666777
+  currency_id: 35
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:02.666777
+  id: 15
+  value: 0.000566
+  nominal: 1.0
+currency_converters_36: 
+  created_at: 2011-04-29 09:28:21.204892
+  currency_id: 74
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:21.204892
+  id: 36
+  value: 0.011998
+  nominal: 1.0
+currency_converters_57: 
+  created_at: 2011-04-29 09:28:40.134961
+  currency_id: 112
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:40.134961
+  id: 57
+  value: 2.59747
+  nominal: 1.0
+currency_converters_81: 
+  created_at: 2011-04-29 09:29:04.774824
+  currency_id: 153
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:04.774824
+  id: 81
+  value: 0.05305
+  nominal: 1.0
+currency_converters_79: 
+  created_at: 2011-04-29 09:29:02.533032
+  currency_id: 147
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:02.533032
+  id: 79
+  value: 0.12551
+  nominal: 1.0
+currency_converters_1: 
+  created_at: 2011-04-29 09:27:47.515238
+  currency_id: 1
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:47.515238
+  id: 1
+  value: 0.272257
+  nominal: 1.0
+currency_converters_16: 
+  created_at: 2011-04-29 09:28:03.675232
+  currency_id: 37
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:03.675232
+  id: 16
+  value: 0.00201
+  nominal: 1.0
+currency_converters_37: 
+  created_at: 2011-04-29 09:28:23.465039
+  currency_id: 79
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:23.465039
+  id: 37
+  value: 0.000932
+  nominal: 1.0
+currency_converters_60: 
+  created_at: 2011-04-29 09:28:41.744837
+  currency_id: 116
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:41.744837
+  id: 60
+  value: 0.02317
+  nominal: 1.0
+currency_converters_58: 
+  created_at: 2011-04-29 09:28:40.895114
+  currency_id: 114
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:40.895114
+  id: 58
+  value: 0.354421
+  nominal: 1.0
+currency_converters_82: 
+  created_at: 2011-04-29 09:29:05.155132
+  currency_id: 154
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:05.155132
+  id: 82
+  value: 0.000591
+  nominal: 1.0
+currency_converters_17: 
+  created_at: 2011-04-29 09:28:05.255164
+  currency_id: 41
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:05.255164
+  id: 17
+  value: 0.061497
+  nominal: 1.0
+currency_converters_40: 
+  created_at: 2011-04-29 09:28:25.305153
+  currency_id: 82
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:25.305153
+  id: 40
+  value: 0.00687
+  nominal: 1.0
+currency_converters_38: 
+  created_at: 2011-04-29 09:28:24.066350
+  currency_id: 80
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:24.066350
+  id: 38
+  value: 3.64498
+  nominal: 1.0
+currency_converters_61: 
+  created_at: 2011-04-29 09:28:42.164821
+  currency_id: 117
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:42.164821
+  id: 61
+  value: 0.011812
+  nominal: 1.0
+currency_converters_59: 
+  created_at: 2011-04-29 09:28:41.314836
+  currency_id: 115
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:41.314836
+  id: 59
+  value: 0.398
+  nominal: 1.0
+currency_converters_2: 
+  created_at: 2011-04-29 09:27:49.105504
+  currency_id: 5
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:49.105504
+  id: 2
+  value: 0.571429
+  nominal: 1.0
+currency_converters_83: 
+  created_at: 2011-04-29 09:29:05.952661
+  currency_id: 156
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:05.952661
+  id: 83
+  value: 4.9
+  nominal: 1.0
+currency_converters_20: 
+  created_at: 2011-04-29 09:28:07.204944
+  currency_id: 45
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:07.204944
+  id: 20
+  value: 0.013996
+  nominal: 1.0
+currency_converters_18: 
+  created_at: 2011-04-29 09:28:06.074912
+  currency_id: 43
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:06.074912
+  id: 18
+  value: 0.198716
+  nominal: 1.0
+currency_converters_41: 
+  created_at: 2011-04-29 09:28:26.344952
+  currency_id: 84
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:26.344952
+  id: 41
+  value: 0.000666
+  nominal: 1.0
+currency_converters_39: 
+  created_at: 2011-04-29 09:28:24.744998
+  currency_id: 81
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:24.744998
+  id: 39
+  value: 1.23457
+  nominal: 1.0
+currency_converters_62: 
+  created_at: 2011-04-29 09:28:42.705038
+  currency_id: 118
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:42.705038
+  id: 62
+  value: 0.376279
+  nominal: 1.0
+currency_converters_3: 
+  created_at: 2011-04-29 09:27:49.867090
+  currency_id: 7
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:49.867090
+  id: 3
+  value: 0.245308
+  nominal: 1.0
+currency_converters_84: 
+  created_at: 2011-04-29 09:29:13.435437
+  currency_id: 175
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:13.435437
+  id: 84
+  value: 0.004662
+  nominal: 1.0
+currency_converters_21: 
+  created_at: 2011-04-29 09:28:07.634972
+  currency_id: 46
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:07.634972
+  id: 21
+  value: 0.168152
+  nominal: 1.0
+currency_converters_19: 
+  created_at: 2011-04-29 09:28:06.494749
+  currency_id: 44
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:06.494749
+  id: 19
+  value: 0.026525
+  nominal: 1.0
+currency_converters_42: 
+  created_at: 2011-04-29 09:28:26.865317
+  currency_id: 85
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:26.865317
+  id: 42
+  value: 0.009116
+  nominal: 1.0
+currency_converters_63: 
+  created_at: 2011-04-29 09:28:43.105329
+  currency_id: 119
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:43.105329
+  id: 63
+  value: 0.000254
+  nominal: 1.0
+currency_converters_4: 
+  created_at: 2011-04-29 09:27:50.266205
+  currency_id: 8
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:50.266205
+  id: 4
+  value: 1.0907
+  nominal: 1.0
+currency_converters_85: 
+  created_at: 2011-04-29 09:29:13.813502
+  currency_id: 176
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:13.813502
+  id: 85
+  value: 0.151286
+  nominal: 1.0
+currency_converters_22: 
+  created_at: 2011-04-29 09:28:08.795153
+  currency_id: 49
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:08.795153
+  id: 22
+  value: 1.482
+  nominal: 1.0
+currency_converters_43: 
+  created_at: 2011-04-29 09:28:28.503154
+  currency_id: 88
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:28.503154
+  id: 43
+  value: 0.429203
+  nominal: 1.0
+currency_converters_64: 
+  created_at: 2011-04-29 09:28:43.486822
+  currency_id: 120
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:43.486822
+  id: 64
+  value: 0.274612
+  nominal: 1.0
+currency_converters_5: 
+  created_at: 2011-04-29 09:27:52.625790
+  currency_id: 14
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:52.625790
+  id: 5
+  value: 0.757748
+  nominal: 1.0
+currency_converters_86: 
+  created_at: 2011-04-29 09:29:14.182716
+  currency_id: 177
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:29:14.182716
+  id: 86
+  value: 0.000213
+  nominal: 1.0
+currency_converters_44: 
+  created_at: 2011-04-29 09:28:29.005118
+  currency_id: 89
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:29.005118
+  id: 44
+  value: 2.08986
+  nominal: 1.0
+currency_converters_65: 
+  created_at: 2011-04-29 09:28:44.505129
+  currency_id: 121
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:44.505129
+  id: 65
+  value: 0.363293
+  nominal: 1.0
+currency_converters_6: 
+  created_at: 2011-04-29 09:27:53.005316
+  currency_id: 15
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:53.005316
+  id: 6
+  value: 2.65266
+  nominal: 1.0
+currency_converters_23: 
+  created_at: 2011-04-29 09:28:09.234950
+  currency_id: 50
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:09.234950
+  id: 23
+  value: 0.5687
+  nominal: 1.0
+currency_converters_66: 
+  created_at: 2011-04-29 09:28:44.944935
+  currency_id: 122
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:44.944935
+  id: 66
+  value: 0.014923
+  nominal: 1.0
+currency_converters_7: 
+  created_at: 2011-04-29 09:27:54.604874
+  currency_id: 18
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:27:54.604874
+  id: 7
+  value: 0.813405
+  nominal: 1.0
+currency_converters_45: 
+  created_at: 2011-04-29 09:28:30.044797
+  currency_id: 91
+  date_req: 2011-04-29 09:27:46.840100
+  updated_at: 2011-04-29 09:28:30.044797
+  id: 45
+  value: 0.130213
+  nominal: 1.0
