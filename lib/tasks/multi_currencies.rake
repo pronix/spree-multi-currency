@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'nokogiri'
 # add custom rake tasks here
 namespace :multi_currencies do
 
@@ -61,7 +62,7 @@ namespace :multi_currencies do
       date = Date.strptime(data.xpath('gesmes:Envelope/xmlns:Cube/xmlns:Cube').attr("time").to_s, "%Y-%m-%d")
       data.xpath('gesmes:Envelope/xmlns:Cube/xmlns:Cube//xmlns:Cube').each do |exchange_rate|
         char_code      = exchange_rate.attribute("currency").value.to_s.strip
-        value, nimonal = exchange_rate.attribute("rate").value.to_f, 1
+        value, nominal = exchange_rate.attribute("rate").value.to_f, 1
         currency = Currency.find_by_char_code(char_code)
         currency && CurrencyConverter.add(currency, date, value, nominal)
       end

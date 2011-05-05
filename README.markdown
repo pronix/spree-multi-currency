@@ -20,7 +20,8 @@ Load currencies:
 Load rates:
 ----------
     rake multi_currencies:rates:cbr                               # Курс Сбербанка РФ http://www.cbr.ru
-    rake "multi_currencies:rates:ecb[load_currencies]"              # Rates from European Central Bank
+    rake "multi_currencies:rates:ecb[load_currencies]"              # Rates from European Central Bank 
+  for example     rake multi_currencies:rates:google[USD]
     rake "multi_currencies:rates:google[currency,load_currencies]"  # Rates from Google
 
 
@@ -73,5 +74,8 @@ Settings
           unit: "€"
 
 
-
-
+For tests
+_________________________
+  in Rakefile defined
+   ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
+   and spree-multi_currencies as gem in /home/dima/project/spree/spree-multi_currencies

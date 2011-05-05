@@ -1,0 +1,1603 @@
+--- 
+currencies_130: 
+  name: Singapore dollar
+  created_at: 2011-04-29 09:23:38.475946
+  char_code: SGD
+  updated_at: 2011-04-29 09:23:38.475946
+  id: 130
+  basic: f
+  locale: 
+  num_code: "702"
+currencies_84: 
+  name: Lebanese pound
+  created_at: 2011-04-29 09:23:37.613603
+  char_code: LBP
+  updated_at: 2011-04-29 09:23:37.613603
+  id: 84
+  basic: f
+  locale: 
+  num_code: "422"
+currencies_56: 
+  name: Gambian dalasi
+  created_at: 2011-04-29 09:23:37.150576
+  char_code: GMD
+  updated_at: 2011-04-29 09:23:37.150576
+  id: 56
+  basic: f
+  locale: 
+  num_code: "270"
+currencies_28: 
+  name: Congolese franc
+  created_at: 2011-04-29 09:23:36.690260
+  char_code: CDF
+  updated_at: 2011-04-29 09:23:36.690260
+  id: 28
+  basic: f
+  locale: 
+  num_code: "976"
+currencies_101: 
+  name: Malawian kwacha
+  created_at: 2011-04-29 09:23:38.009599
+  char_code: MWK
+  updated_at: 2011-04-29 09:23:38.009599
+  id: 101
+  basic: f
+  locale: 
+  num_code: "454"
+currencies_131: 
+  name: Saint Helena pound
+  created_at: 2011-04-29 09:23:38.491220
+  char_code: SHP
+  updated_at: 2011-04-29 09:23:38.491220
+  id: 131
+  basic: f
+  locale: 
+  num_code: "654"
+currencies_85: 
+  name: Sri Lanka rupee
+  created_at: 2011-04-29 09:23:37.629388
+  char_code: LKR
+  updated_at: 2011-04-29 09:23:37.629388
+  id: 85
+  basic: f
+  locale: 
+  num_code: "144"
+currencies_57: 
+  name: Guinean franc
+  created_at: 2011-04-29 09:23:37.165087
+  char_code: GNF
+  updated_at: 2011-04-29 09:23:37.165087
+  id: 57
+  basic: f
+  locale: 
+  num_code: "324"
+currencies_29: 
+  name: WIR Euro (complementary currency)
+  created_at: 2011-04-29 09:23:36.705865
+  char_code: CHE
+  updated_at: 2011-04-29 09:23:36.705865
+  id: 29
+  basic: f
+  locale: 
+  num_code: "947"
+currencies_102: 
+  name: Mexican peso
+  created_at: 2011-04-29 09:23:38.034499
+  char_code: MXN
+  updated_at: 2011-04-29 09:23:38.034499
+  id: 102
+  basic: f
+  locale: 
+  num_code: "484"
+currencies_160: 
+  name: Silver (one troy ounce)
+  created_at: 2011-04-29 09:23:39.133670
+  char_code: XAG
+  updated_at: 2011-04-29 09:23:39.133670
+  id: 160
+  basic: f
+  locale: 
+  num_code: "961"
+currencies_86: 
+  name: Liberian dollar
+  created_at: 2011-04-29 09:23:37.641660
+  char_code: LRD
+  updated_at: 2011-04-29 09:23:37.641660
+  id: 86
+  basic: f
+  locale: 
+  num_code: "430"
+currencies_58: 
+  name: Guatemalan quetzal
+  created_at: 2011-04-29 09:23:37.187747
+  char_code: GTQ
+  updated_at: 2011-04-29 09:23:37.187747
+  id: 58
+  basic: f
+  locale: 
+  num_code: "320"
+currencies_103: 
+  name: Mexican Unidad de Inversion (UDI) (funds code)
+  created_at: 2011-04-29 09:23:38.049737
+  char_code: MXV
+  updated_at: 2011-04-29 09:23:38.049737
+  id: 103
+  basic: f
+  locale: 
+  num_code: "979"
+currencies_161: 
+  name: Gold (one troy ounce)
+  created_at: 2011-04-29 09:23:39.150487
+  char_code: XAU
+  updated_at: 2011-04-29 09:23:39.150487
+  id: 161
+  basic: f
+  locale: 
+  num_code: "959"
+currencies_132: 
+  name: Sierra Leonean leone
+  created_at: 2011-04-29 09:23:38.507207
+  char_code: SLL
+  updated_at: 2011-04-29 09:23:38.507207
+  id: 132
+  basic: f
+  locale: 
+  num_code: "694"
+currencies_59: 
+  name: Guyanese dollar
+  created_at: 2011-04-29 09:23:37.202289
+  char_code: GYD
+  updated_at: 2011-04-29 09:23:37.202289
+  id: 59
+  basic: f
+  locale: 
+  num_code: "328"
+currencies_104: 
+  name: Malaysian ringgit
+  created_at: 2011-04-29 09:23:38.061784
+  char_code: MYR
+  updated_at: 2011-04-29 09:23:38.061784
+  id: 104
+  basic: f
+  locale: 
+  num_code: "458"
+currencies_87: 
+  name: Lesotho loti
+  created_at: 2011-04-29 09:23:37.653480
+  char_code: LSL
+  updated_at: 2011-04-29 09:23:37.653480
+  id: 87
+  basic: f
+  locale: 
+  num_code: "426"
+currencies_162: 
+  name: European Composite Unit (EURCO) (bond market unit)
+  created_at: 2011-04-29 09:23:39.167943
+  char_code: XBA
+  updated_at: 2011-04-29 09:23:39.167943
+  id: 162
+  basic: f
+  locale: 
+  num_code: "955"
+currencies_133: 
+  name: Somali shilling
+  created_at: 2011-04-29 09:23:38.521398
+  char_code: SOS
+  updated_at: 2011-04-29 09:23:38.521398
+  id: 133
+  basic: f
+  locale: 
+  num_code: "706"
+currencies_105: 
+  name: Mozambican metical
+  created_at: 2011-04-29 09:23:38.075234
+  char_code: MZN
+  updated_at: 2011-04-29 09:23:38.075234
+  id: 105
+  basic: f
+  locale: 
+  num_code: "943"
+currencies_88: 
+  name: Lithuanian litas
+  created_at: 2011-04-29 09:23:37.668036
+  char_code: LTL
+  updated_at: 2011-04-29 09:23:37.668036
+  id: 88
+  basic: f
+  locale: 
+  num_code: "440"
+currencies_163: 
+  name: European Monetary Unit (E.M.U.-6) (bond market unit)
+  created_at: 2011-04-29 09:23:39.195260
+  char_code: XBB
+  updated_at: 2011-04-29 09:23:39.195260
+  id: 163
+  basic: f
+  locale: 
+  num_code: "956"
+currencies_134: 
+  name: Surinamese dollar
+  created_at: 2011-04-29 09:23:38.542319
+  char_code: SRD
+  updated_at: 2011-04-29 09:23:38.542319
+  id: 134
+  basic: f
+  locale: 
+  num_code: "968"
+currencies_106: 
+  name: Namibian dollar
+  created_at: 2011-04-29 09:23:38.089667
+  char_code: NAD
+  updated_at: 2011-04-29 09:23:38.089667
+  id: 106
+  basic: f
+  locale: 
+  num_code: "516"
+currencies_30: 
+  name: Swiss franc
+  created_at: 2011-04-29 09:23:36.721373
+  char_code: CHF
+  updated_at: 2011-04-29 09:23:36.721373
+  id: 30
+  basic: f
+  locale: 
+  num_code: "756"
+currencies_89: 
+  name: Latvian lats
+  created_at: 2011-04-29 09:23:37.683849
+  char_code: LVL
+  updated_at: 2011-04-29 09:23:37.683849
+  id: 89
+  basic: f
+  locale: 
+  num_code: "428"
+currencies_164: 
+  name: European Unit of Account 9 (E.U.A.-9) (bond market unit)
+  created_at: 2011-04-29 09:23:39.210068
+  char_code: XBC
+  updated_at: 2011-04-29 09:23:39.210068
+  id: 164
+  basic: f
+  locale: 
+  num_code: "957"
+currencies_135: 
+  name: "S\xC3\xA3o Tom\xC3\xA9 and Pr\xC3\xADncipe dobra"
+  created_at: 2011-04-29 09:23:38.561763
+  char_code: STD
+  updated_at: 2011-04-29 09:23:38.561763
+  id: 135
+  basic: f
+  locale: 
+  num_code: "678"
+currencies_107: 
+  name: Nigerian naira
+  created_at: 2011-04-29 09:23:38.103631
+  char_code: NGN
+  updated_at: 2011-04-29 09:23:38.103631
+  id: 107
+  basic: f
+  locale: 
+  num_code: "566"
+currencies_31: 
+  name: WIR Franc (complementary currency)
+  created_at: 2011-04-29 09:23:36.734965
+  char_code: CHW
+  updated_at: 2011-04-29 09:23:36.734965
+  id: 31
+  basic: f
+  locale: 
+  num_code: "948"
+currencies_136: 
+  name: Syrian pound
+  created_at: 2011-04-29 09:23:38.578737
+  char_code: SYP
+  updated_at: 2011-04-29 09:23:38.578737
+  id: 136
+  basic: f
+  locale: 
+  num_code: "760"
+currencies_60: 
+  name: Hong Kong dollar
+  created_at: 2011-04-29 09:23:37.217841
+  char_code: HKD
+  updated_at: 2011-04-29 09:23:37.217841
+  id: 60
+  basic: f
+  locale: 
+  num_code: "344"
+currencies_108: 
+  name: Cordoba oro
+  created_at: 2011-04-29 09:23:38.120318
+  char_code: NIO
+  updated_at: 2011-04-29 09:23:38.120318
+  id: 108
+  basic: f
+  locale: 
+  num_code: "558"
+currencies_32: 
+  name: Unidad de Fomento (funds code)
+  created_at: 2011-04-29 09:23:36.748473
+  char_code: CLF
+  updated_at: 2011-04-29 09:23:36.748473
+  id: 32
+  basic: f
+  locale: 
+  num_code: "990"
+currencies_165: 
+  name: European Unit of Account 17 (E.U.A.-17) (bond market unit)
+  created_at: 2011-04-29 09:23:39.239253
+  char_code: XBD
+  updated_at: 2011-04-29 09:23:39.239253
+  id: 165
+  basic: f
+  locale: 
+  num_code: "958"
+currencies_137: 
+  name: Lilangeni
+  created_at: 2011-04-29 09:23:38.595533
+  char_code: SZL
+  updated_at: 2011-04-29 09:23:38.595533
+  id: 137
+  basic: f
+  locale: 
+  num_code: "748"
+currencies_61: 
+  name: Honduran lempira
+  created_at: 2011-04-29 09:23:37.233981
+  char_code: HNL
+  updated_at: 2011-04-29 09:23:37.233981
+  id: 61
+  basic: f
+  locale: 
+  num_code: "340"
+currencies_109: 
+  name: Norwegian krone
+  created_at: 2011-04-29 09:23:38.137341
+  char_code: NOK
+  updated_at: 2011-04-29 09:23:38.137341
+  id: 109
+  basic: f
+  locale: 
+  num_code: "578"
+currencies_33: 
+  name: Chilean peso
+  created_at: 2011-04-29 09:23:36.765208
+  char_code: CLP
+  updated_at: 2011-04-29 09:23:36.765208
+  id: 33
+  basic: f
+  locale: 
+  num_code: "152"
+currencies_166: 
+  name: East Caribbean dollar
+  created_at: 2011-04-29 09:23:39.250526
+  char_code: XCD
+  updated_at: 2011-04-29 09:23:39.250526
+  id: 166
+  basic: f
+  locale: 
+  num_code: "951"
+currencies_138: 
+  name: Thai baht
+  created_at: 2011-04-29 09:23:38.612111
+  char_code: THB
+  updated_at: 2011-04-29 09:23:38.612111
+  id: 138
+  basic: f
+  locale: 
+  num_code: "764"
+currencies_62: 
+  name: Croatian kuna
+  created_at: 2011-04-29 09:23:37.250006
+  char_code: HRK
+  updated_at: 2011-04-29 09:23:37.250006
+  id: 62
+  basic: f
+  locale: 
+  num_code: "191"
+currencies_34: 
+  name: Chinese yuan
+  created_at: 2011-04-29 09:23:36.781471
+  char_code: CNY
+  updated_at: 2011-04-29 09:23:36.781471
+  id: 34
+  basic: f
+  locale: 
+  num_code: "156"
+currencies_90: 
+  name: Libyan dinar
+  created_at: 2011-04-29 09:23:37.711530
+  char_code: LYD
+  updated_at: 2011-04-29 09:23:37.711530
+  id: 90
+  basic: f
+  locale: 
+  num_code: "434"
+currencies_167: 
+  name: Special Drawing Rights
+  created_at: 2011-04-29 09:23:39.271802
+  char_code: XDR
+  updated_at: 2011-04-29 09:23:39.271802
+  id: 167
+  basic: f
+  locale: 
+  num_code: "960"
+currencies_139: 
+  name: Tajikistani somoni
+  created_at: 2011-04-29 09:23:38.628226
+  char_code: TJS
+  updated_at: 2011-04-29 09:23:38.628226
+  id: 139
+  basic: f
+  locale: 
+  num_code: "972"
+currencies_63: 
+  name: Haitian gourde
+  created_at: 2011-04-29 09:23:37.265776
+  char_code: HTG
+  updated_at: 2011-04-29 09:23:37.265776
+  id: 63
+  basic: f
+  locale: 
+  num_code: "332"
+currencies_35: 
+  name: Colombian peso
+  created_at: 2011-04-29 09:23:36.798342
+  char_code: COP
+  updated_at: 2011-04-29 09:23:36.798342
+  id: 35
+  basic: f
+  locale: 
+  num_code: "170"
+currencies_91: 
+  name: Moroccan dirham
+  created_at: 2011-04-29 09:23:37.728085
+  char_code: MAD
+  updated_at: 2011-04-29 09:23:37.728085
+  id: 91
+  basic: f
+  locale: 
+  num_code: "504"
+currencies_168: 
+  name: UIC franc (special settlement currency)
+  created_at: 2011-04-29 09:23:39.286129
+  char_code: XFU
+  updated_at: 2011-04-29 09:23:39.286129
+  id: 168
+  basic: f
+  locale: 
+  num_code: Nil
+currencies_64: 
+  name: Hungarian forint
+  created_at: 2011-04-29 09:23:37.281360
+  char_code: HUF
+  updated_at: 2011-04-29 09:23:37.281360
+  id: 64
+  basic: f
+  locale: 
+  num_code: "348"
+currencies_36: 
+  name: Unidad de Valor Real
+  created_at: 2011-04-29 09:23:36.822953
+  char_code: COU
+  updated_at: 2011-04-29 09:23:36.822953
+  id: 36
+  basic: f
+  locale: 
+  num_code: "970"
+currencies_92: 
+  name: Moldovan leu
+  created_at: 2011-04-29 09:23:37.743798
+  char_code: MDL
+  updated_at: 2011-04-29 09:23:37.743798
+  id: 92
+  basic: f
+  locale: 
+  num_code: "498"
+currencies_169: 
+  name: CFA Franc BCEAO
+  created_at: 2011-04-29 09:23:39.314433
+  char_code: XOF
+  updated_at: 2011-04-29 09:23:39.314433
+  id: 169
+  basic: f
+  locale: 
+  num_code: "952"
+currencies_65: 
+  name: Indonesian rupiah
+  created_at: 2011-04-29 09:23:37.297081
+  char_code: IDR
+  updated_at: 2011-04-29 09:23:37.297081
+  id: 65
+  basic: f
+  locale: 
+  num_code: "360"
+currencies_37: 
+  name: Costa Rican colon
+  created_at: 2011-04-29 09:23:36.839277
+  char_code: CRC
+  updated_at: 2011-04-29 09:23:36.839277
+  id: 37
+  basic: f
+  locale: 
+  num_code: "188"
+currencies_110: 
+  name: Nepalese rupee
+  created_at: 2011-04-29 09:23:38.150757
+  char_code: NPR
+  updated_at: 2011-04-29 09:23:38.150757
+  id: 110
+  basic: f
+  locale: 
+  num_code: "524"
+currencies_93: 
+  name: Malagasy ariary
+  created_at: 2011-04-29 09:23:37.760236
+  char_code: MGA
+  updated_at: 2011-04-29 09:23:37.760236
+  id: 93
+  basic: f
+  locale: 
+  num_code: "969"
+currencies_140: 
+  name: Turkmenistani manat
+  created_at: 2011-04-29 09:23:38.645272
+  char_code: TMT
+  updated_at: 2011-04-29 09:23:38.645272
+  id: 140
+  basic: f
+  locale: 
+  num_code: "934"
+currencies_38: 
+  name: Cuban convertible peso
+  created_at: 2011-04-29 09:23:36.855231
+  char_code: CUC
+  updated_at: 2011-04-29 09:23:36.855231
+  id: 38
+  basic: f
+  locale: 
+  num_code: "931"
+currencies_111: 
+  name: New Zealand dollar
+  created_at: 2011-04-29 09:23:38.163768
+  char_code: NZD
+  updated_at: 2011-04-29 09:23:38.163768
+  id: 111
+  basic: f
+  locale: 
+  num_code: "554"
+currencies_94: 
+  name: Macedonian denar
+  created_at: 2011-04-29 09:23:37.777188
+  char_code: MKD
+  updated_at: 2011-04-29 09:23:37.777188
+  id: 94
+  basic: f
+  locale: 
+  num_code: "807"
+currencies_66: 
+  name: Israeli new sheqel
+  created_at: 2011-04-29 09:23:37.313090
+  char_code: ILS
+  updated_at: 2011-04-29 09:23:37.313090
+  id: 66
+  basic: f
+  locale: 
+  num_code: "376"
+currencies_141: 
+  name: Tunisian dinar
+  created_at: 2011-04-29 09:23:38.662437
+  char_code: TND
+  updated_at: 2011-04-29 09:23:38.662437
+  id: 141
+  basic: f
+  locale: 
+  num_code: "788"
+currencies_39: 
+  name: Cuban peso
+  created_at: 2011-04-29 09:23:36.868769
+  char_code: CUP
+  updated_at: 2011-04-29 09:23:36.868769
+  id: 39
+  basic: f
+  locale: 
+  num_code: "192"
+currencies_112: 
+  name: Omani rial
+  created_at: 2011-04-29 09:23:38.178964
+  char_code: OMR
+  updated_at: 2011-04-29 09:23:38.178964
+  id: 112
+  basic: f
+  locale: 
+  num_code: "512"
+currencies_95: 
+  name: Myanma kyat
+  created_at: 2011-04-29 09:23:37.793860
+  char_code: MMK
+  updated_at: 2011-04-29 09:23:37.793860
+  id: 95
+  basic: f
+  locale: 
+  num_code: "104"
+currencies_1: 
+  name: United Arab Emirates dirham
+  created_at: 2011-04-29 09:23:36.220534
+  char_code: AED
+  updated_at: 2011-04-29 09:23:36.220534
+  id: 1
+  basic: f
+  locale: 
+  num_code: "784"
+currencies_67: 
+  name: Indian rupee
+  created_at: 2011-04-29 09:23:37.328897
+  char_code: INR
+  updated_at: 2011-04-29 09:23:37.328897
+  id: 67
+  basic: f
+  locale: 
+  num_code: "356"
+currencies_170: 
+  name: Palladium (one troy ounce)
+  created_at: 2011-04-29 09:23:39.329236
+  char_code: XPD
+  updated_at: 2011-04-29 09:23:39.329236
+  id: 170
+  basic: f
+  locale: 
+  num_code: "964"
+currencies_142: 
+  name: "Tongan pa\xCA\xBBanga"
+  created_at: 2011-04-29 09:23:38.679548
+  char_code: TOP
+  updated_at: 2011-04-29 09:23:38.679548
+  id: 142
+  basic: f
+  locale: 
+  num_code: "776"
+currencies_113: 
+  name: Panamanian balboa
+  created_at: 2011-04-29 09:23:38.200097
+  char_code: PAB
+  updated_at: 2011-04-29 09:23:38.200097
+  id: 113
+  basic: f
+  locale: 
+  num_code: "590"
+currencies_96: 
+  name: Mongolian tugrik
+  created_at: 2011-04-29 09:23:37.809635
+  char_code: MNT
+  updated_at: 2011-04-29 09:23:37.809635
+  id: 96
+  basic: f
+  locale: 
+  num_code: "496"
+currencies_2: 
+  name: Afghan afghani
+  created_at: 2011-04-29 09:23:36.253673
+  char_code: AFN
+  updated_at: 2011-04-29 09:23:36.253673
+  id: 2
+  basic: f
+  locale: 
+  num_code: "971"
+currencies_68: 
+  name: Iraqi dinar
+  created_at: 2011-04-29 09:23:37.345600
+  char_code: IQD
+  updated_at: 2011-04-29 09:23:37.345600
+  id: 68
+  basic: f
+  locale: 
+  num_code: "368"
+currencies_171: 
+  name: CFP franc
+  created_at: 2011-04-29 09:23:39.342542
+  char_code: XPF
+  updated_at: 2011-04-29 09:23:39.342542
+  id: 171
+  basic: f
+  locale: 
+  num_code: "953"
+currencies_114: 
+  name: Peruvian nuevo sol
+  created_at: 2011-04-29 09:23:38.215062
+  char_code: PEN
+  updated_at: 2011-04-29 09:23:38.215062
+  id: 114
+  basic: f
+  locale: 
+  num_code: "604"
+currencies_97: 
+  name: Macanese pataca
+  created_at: 2011-04-29 09:23:37.826038
+  char_code: MOP
+  updated_at: 2011-04-29 09:23:37.826038
+  id: 97
+  basic: f
+  locale: 
+  num_code: "446"
+currencies_3: 
+  name: Albanian lek
+  created_at: 2011-04-29 09:23:36.277869
+  char_code: ALL
+  updated_at: 2011-04-29 09:23:36.277869
+  id: 3
+  basic: f
+  locale: 
+  num_code: 008
+currencies_10: 
+  name: Azerbaijani manat
+  created_at: 2011-04-29 09:23:36.385789
+  char_code: AZN
+  updated_at: 2011-04-29 09:23:36.385789
+  id: 10
+  basic: f
+  locale: 
+  num_code: "944"
+currencies_69: 
+  name: Iranian rial
+  created_at: 2011-04-29 09:23:37.368662
+  char_code: IRR
+  updated_at: 2011-04-29 09:23:37.368662
+  id: 69
+  basic: f
+  locale: 
+  num_code: "364"
+currencies_172: 
+  name: Platinum (one troy ounce)
+  created_at: 2011-04-29 09:23:39.360768
+  char_code: XPT
+  updated_at: 2011-04-29 09:23:39.360768
+  id: 172
+  basic: f
+  locale: 
+  num_code: "962"
+currencies_143: 
+  name: Turkish lira
+  created_at: 2011-04-29 09:23:38.696403
+  char_code: TRY
+  updated_at: 2011-04-29 09:23:38.696403
+  id: 143
+  basic: f
+  locale: 
+  num_code: "949"
+currencies_115: 
+  name: Papua New Guinean kina
+  created_at: 2011-04-29 09:23:38.231233
+  char_code: PGK
+  updated_at: 2011-04-29 09:23:38.231233
+  id: 115
+  basic: f
+  locale: 
+  num_code: "598"
+currencies_98: 
+  name: Mauritanian ouguiya
+  created_at: 2011-04-29 09:23:37.963398
+  char_code: MRO
+  updated_at: 2011-04-29 09:23:37.963398
+  id: 98
+  basic: f
+  locale: 
+  num_code: "478"
+currencies_4: 
+  name: Armenian dram
+  created_at: 2011-04-29 09:23:36.293084
+  char_code: AMD
+  updated_at: 2011-04-29 09:23:36.293084
+  id: 4
+  basic: f
+  locale: 
+  num_code: "051"
+currencies_11: 
+  name: Bosnia and Herzegovina convertible mark
+  created_at: 2011-04-29 09:23:36.400050
+  char_code: BAM
+  updated_at: 2011-04-29 09:23:36.400050
+  id: 11
+  basic: f
+  locale: 
+  num_code: "977"
+currencies_173: 
+  name: Code reserved for testing purposes
+  created_at: 2011-04-29 09:23:39.386866
+  char_code: XTS
+  updated_at: 2011-04-29 09:23:39.386866
+  id: 173
+  basic: f
+  locale: 
+  num_code: "963"
+currencies_144: 
+  name: Trinidad and Tobago dollar
+  created_at: 2011-04-29 09:23:38.711330
+  char_code: TTD
+  updated_at: 2011-04-29 09:23:38.711330
+  id: 144
+  basic: f
+  locale: 
+  num_code: "780"
+currencies_116: 
+  name: Philippine peso
+  created_at: 2011-04-29 09:23:38.246909
+  char_code: PHP
+  updated_at: 2011-04-29 09:23:38.246909
+  id: 116
+  basic: f
+  locale: 
+  num_code: "608"
+currencies_40: 
+  name: Cape Verde escudo
+  created_at: 2011-04-29 09:23:36.885500
+  char_code: CVE
+  updated_at: 2011-04-29 09:23:36.885500
+  id: 40
+  basic: f
+  locale: 
+  num_code: "132"
+currencies_99: 
+  name: Mauritian rupee
+  created_at: 2011-04-29 09:23:37.976582
+  char_code: MUR
+  updated_at: 2011-04-29 09:23:37.976582
+  id: 99
+  basic: f
+  locale: 
+  num_code: "480"
+currencies_5: 
+  name: Netherlands Antillean guilder
+  created_at: 2011-04-29 09:23:36.309192
+  char_code: ANG
+  updated_at: 2011-04-29 09:23:36.309192
+  id: 5
+  basic: f
+  locale: 
+  num_code: "532"
+currencies_12: 
+  name: Barbados dollar
+  created_at: 2011-04-29 09:23:36.416283
+  char_code: BBD
+  updated_at: 2011-04-29 09:23:36.416283
+  id: 12
+  basic: f
+  locale: 
+  num_code: "052"
+currencies_174: 
+  name: No currency
+  created_at: 2011-04-29 09:23:39.404435
+  char_code: XXX
+  updated_at: 2011-04-29 09:23:39.404435
+  id: 174
+  basic: f
+  locale: 
+  num_code: "999"
+currencies_145: 
+  name: New Taiwan dollar
+  created_at: 2011-04-29 09:23:38.727977
+  char_code: TWD
+  updated_at: 2011-04-29 09:23:38.727977
+  id: 145
+  basic: f
+  locale: 
+  num_code: "901"
+currencies_117: 
+  name: Pakistani rupee
+  created_at: 2011-04-29 09:23:38.262852
+  char_code: PKR
+  updated_at: 2011-04-29 09:23:38.262852
+  id: 117
+  basic: f
+  locale: 
+  num_code: "586"
+currencies_41: 
+  name: Czech koruna
+  created_at: 2011-04-29 09:23:36.902768
+  char_code: CZK
+  updated_at: 2011-04-29 09:23:36.902768
+  id: 41
+  basic: f
+  locale: 
+  num_code: "203"
+currencies_6: 
+  name: Angolan kwanza
+  created_at: 2011-04-29 09:23:36.325569
+  char_code: AOA
+  updated_at: 2011-04-29 09:23:36.325569
+  id: 6
+  basic: f
+  locale: 
+  num_code: "973"
+currencies_13: 
+  name: Bangladeshi taka
+  created_at: 2011-04-29 09:23:36.433549
+  char_code: BDT
+  updated_at: 2011-04-29 09:23:36.433549
+  id: 13
+  basic: f
+  locale: 
+  num_code: "050"
+currencies_175: 
+  name: Yemeni rial
+  created_at: 2011-04-29 09:23:39.439401
+  char_code: YER
+  updated_at: 2011-04-29 09:23:39.439401
+  id: 175
+  basic: f
+  locale: 
+  num_code: "886"
+currencies_146: 
+  name: Tanzanian shilling
+  created_at: 2011-04-29 09:23:38.749488
+  char_code: TZS
+  updated_at: 2011-04-29 09:23:38.749488
+  id: 146
+  basic: f
+  locale: 
+  num_code: "834"
+currencies_118: 
+  name: "Polish z\xC5\x82oty"
+  created_at: 2011-04-29 09:23:38.279551
+  char_code: PLN
+  updated_at: 2011-04-29 09:23:38.279551
+  id: 118
+  basic: f
+  locale: 
+  num_code: "985"
+currencies_42: 
+  name: Djiboutian franc
+  created_at: 2011-04-29 09:23:36.919264
+  char_code: DJF
+  updated_at: 2011-04-29 09:23:36.919264
+  id: 42
+  basic: f
+  locale: 
+  num_code: "262"
+currencies_7: 
+  name: Argentine peso
+  created_at: 2011-04-29 09:23:36.339890
+  char_code: ARS
+  updated_at: 2011-04-29 09:23:36.339890
+  id: 7
+  basic: f
+  locale: 
+  num_code: "032"
+currencies_14: 
+  name: Bulgarian lev
+  created_at: 2011-04-29 09:23:36.457941
+  char_code: BGN
+  updated_at: 2011-04-29 09:23:36.457941
+  id: 14
+  basic: f
+  locale: 
+  num_code: "975"
+currencies_70: 
+  name: "Icelandic kr\xC3\xB3na"
+  created_at: 2011-04-29 09:23:37.382316
+  char_code: ISK
+  updated_at: 2011-04-29 09:23:37.382316
+  id: 70
+  basic: f
+  locale: 
+  num_code: "352"
+currencies_147: 
+  name: Ukrainian hryvnia
+  created_at: 2011-04-29 09:23:38.763526
+  char_code: UAH
+  updated_at: 2011-04-29 09:23:38.763526
+  id: 147
+  basic: f
+  locale: 
+  num_code: "980"
+currencies_119: 
+  name: "Paraguayan guaran\xC3\xAD"
+  created_at: 2011-04-29 09:23:38.296627
+  char_code: PYG
+  updated_at: 2011-04-29 09:23:38.296627
+  id: 119
+  basic: f
+  locale: 
+  num_code: "600"
+currencies_43: 
+  name: Danish krone
+  created_at: 2011-04-29 09:23:36.936210
+  char_code: DKK
+  updated_at: 2011-04-29 09:23:36.936210
+  id: 43
+  basic: f
+  locale: 
+  num_code: "208"
+currencies_8: 
+  name: Australian dollar
+  created_at: 2011-04-29 09:23:36.353800
+  char_code: AUD
+  updated_at: 2011-04-29 09:23:36.353800
+  id: 8
+  basic: f
+  locale: 
+  num_code: "036"
+currencies_15: 
+  name: Bahraini dinar
+  created_at: 2011-04-29 09:23:36.472317
+  char_code: BHD
+  updated_at: 2011-04-29 09:23:36.472317
+  id: 15
+  basic: f
+  locale: 
+  num_code: 048
+currencies_71: 
+  name: Jamaican dollar
+  created_at: 2011-04-29 09:23:37.398927
+  char_code: JMD
+  updated_at: 2011-04-29 09:23:37.398927
+  id: 71
+  basic: f
+  locale: 
+  num_code: "388"
+currencies_176: 
+  name: South African rand
+  created_at: 2011-04-29 09:23:39.461584
+  char_code: ZAR
+  updated_at: 2011-04-29 09:23:39.461584
+  id: 176
+  basic: f
+  locale: 
+  num_code: "710"
+currencies_148: 
+  name: Ugandan shilling
+  created_at: 2011-04-29 09:23:38.780552
+  char_code: UGX
+  updated_at: 2011-04-29 09:23:38.780552
+  id: 148
+  basic: f
+  locale: 
+  num_code: "800"
+currencies_44: 
+  name: Dominican peso
+  created_at: 2011-04-29 09:23:36.950666
+  char_code: DOP
+  updated_at: 2011-04-29 09:23:36.950666
+  id: 44
+  basic: f
+  locale: 
+  num_code: "214"
+currencies_9: 
+  name: Aruban florin
+  created_at: 2011-04-29 09:23:36.370181
+  char_code: AWG
+  updated_at: 2011-04-29 09:23:36.370181
+  id: 9
+  basic: f
+  locale: 
+  num_code: "533"
+currencies_16: 
+  name: Burundian franc
+  created_at: 2011-04-29 09:23:36.489093
+  char_code: BIF
+  updated_at: 2011-04-29 09:23:36.489093
+  id: 16
+  basic: f
+  locale: 
+  num_code: "108"
+currencies_72: 
+  name: Jordanian dinar
+  created_at: 2011-04-29 09:23:37.415190
+  char_code: JOD
+  updated_at: 2011-04-29 09:23:37.415190
+  id: 72
+  basic: f
+  locale: 
+  num_code: "400"
+currencies_177: 
+  name: Zambian kwacha
+  created_at: 2011-04-29 09:23:39.478933
+  char_code: ZMK
+  updated_at: 2011-04-29 09:23:39.478933
+  id: 177
+  basic: f
+  locale: 
+  num_code: "894"
+currencies_149: 
+  name: United States dollar
+  created_at: 2011-04-29 09:23:38.804944
+  char_code: USD
+  updated_at: 2011-04-29 09:31:05.245228
+  id: 149
+  basic: t
+  locale: en
+  num_code: "840"
+currencies_17: 
+  name: Bermudian dollar (customarily known as Bermuda dollar)
+  created_at: 2011-04-29 09:23:36.506325
+  char_code: BMD
+  updated_at: 2011-04-29 09:23:36.506325
+  id: 17
+  basic: f
+  locale: 
+  num_code: "060"
+currencies_73: 
+  name: Japanese yen
+  created_at: 2011-04-29 09:23:37.431058
+  char_code: JPY
+  updated_at: 2011-04-29 09:23:37.431058
+  id: 73
+  basic: f
+  locale: 
+  num_code: "392"
+currencies_45: 
+  name: Algerian dinar
+  created_at: 2011-04-29 09:23:36.967234
+  char_code: DZD
+  updated_at: 2011-04-29 09:23:36.967234
+  id: 45
+  basic: f
+  locale: 
+  num_code: "012"
+currencies_178: 
+  name: Zimbabwe dollar
+  created_at: 2011-04-29 09:23:39.493765
+  char_code: ZWL
+  updated_at: 2011-04-29 09:23:39.493765
+  id: 178
+  basic: f
+  locale: 
+  num_code: "932"
+currencies_120: 
+  name: Qatari rial
+  created_at: 2011-04-29 09:23:38.314072
+  char_code: QAR
+  updated_at: 2011-04-29 09:23:38.314072
+  id: 120
+  basic: f
+  locale: 
+  num_code: "634"
+currencies_18: 
+  name: Brunei dollar
+  created_at: 2011-04-29 09:23:36.519992
+  char_code: BND
+  updated_at: 2011-04-29 09:23:36.519992
+  id: 18
+  basic: f
+  locale: 
+  num_code: 096
+currencies_74: 
+  name: Kenyan shilling
+  created_at: 2011-04-29 09:23:37.446954
+  char_code: KES
+  updated_at: 2011-04-29 09:23:37.446954
+  id: 74
+  basic: f
+  locale: 
+  num_code: "404"
+currencies_46: 
+  name: Egyptian pound
+  created_at: 2011-04-29 09:23:36.992699
+  char_code: EGP
+  updated_at: 2011-04-29 09:23:36.992699
+  id: 46
+  basic: f
+  locale: 
+  num_code: "818"
+currencies_19: 
+  name: Boliviano
+  created_at: 2011-04-29 09:23:36.536254
+  char_code: BOB
+  updated_at: 2011-04-29 09:23:36.536254
+  id: 19
+  basic: f
+  locale: 
+  num_code: 068
+currencies_75: 
+  name: Kyrgyzstani som
+  created_at: 2011-04-29 09:23:37.463358
+  char_code: KGS
+  updated_at: 2011-04-29 09:23:37.463358
+  id: 75
+  basic: f
+  locale: 
+  num_code: "417"
+currencies_47: 
+  name: Eritrean nakfa
+  created_at: 2011-04-29 09:23:37.011172
+  char_code: ERN
+  updated_at: 2011-04-29 09:23:37.011172
+  id: 47
+  basic: f
+  locale: 
+  num_code: "232"
+currencies_150: 
+  name: United States dollar (next day) (funds code)
+  created_at: 2011-04-29 09:23:38.818956
+  char_code: USN
+  updated_at: 2011-04-29 09:23:38.818956
+  id: 150
+  basic: f
+  locale: 
+  num_code: "997"
+currencies_121: 
+  name: Romanian new leu
+  created_at: 2011-04-29 09:23:38.331218
+  char_code: RON
+  updated_at: 2011-04-29 09:23:38.331218
+  id: 121
+  basic: f
+  locale: 
+  num_code: "946"
+currencies_76: 
+  name: Cambodian riel
+  created_at: 2011-04-29 09:23:37.480269
+  char_code: KHR
+  updated_at: 2011-04-29 09:23:37.480269
+  id: 76
+  basic: f
+  locale: 
+  num_code: "116"
+currencies_48: 
+  name: Ethiopian birr
+  created_at: 2011-04-29 09:23:37.027236
+  char_code: ETB
+  updated_at: 2011-04-29 09:23:37.027236
+  id: 48
+  basic: f
+  locale: 
+  num_code: "230"
+currencies_151: 
+  name: United States dollar (same day) (funds code) (one source[who?] claims it is no longer used, but it is still on the ISO 4217-MA list)
+  created_at: 2011-04-29 09:23:38.870967
+  char_code: USS
+  updated_at: 2011-04-29 09:23:38.870967
+  id: 151
+  basic: f
+  locale: 
+  num_code: "998"
+currencies_122: 
+  name: Serbian dinar
+  created_at: 2011-04-29 09:23:38.347172
+  char_code: RSD
+  updated_at: 2011-04-29 09:23:38.347172
+  id: 122
+  basic: f
+  locale: 
+  num_code: "941"
+currencies_77: 
+  name: Comoro franc
+  created_at: 2011-04-29 09:23:37.495520
+  char_code: KMF
+  updated_at: 2011-04-29 09:23:37.495520
+  id: 77
+  basic: f
+  locale: 
+  num_code: "174"
+currencies_49: 
+  name: Euro
+  created_at: 2011-04-29 09:23:37.044014
+  char_code: EUR
+  updated_at: 2011-04-29 09:23:37.044014
+  id: 49
+  basic: f
+  locale: 
+  num_code: "978"
+currencies_152: 
+  name: Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)
+  created_at: 2011-04-29 09:23:38.893716
+  char_code: UYI
+  updated_at: 2011-04-29 09:23:38.893716
+  id: 152
+  basic: f
+  locale: 
+  num_code: "940"
+currencies_123: 
+  name: Russian rouble
+  created_at: 2011-04-29 09:23:38.363144
+  char_code: RUB
+  updated_at: 2011-04-29 09:31:54.895206
+  id: 123
+  basic: f
+  locale: ru
+  num_code: "643"
+currencies_78: 
+  name: North Korean won
+  created_at: 2011-04-29 09:23:37.510967
+  char_code: KPW
+  updated_at: 2011-04-29 09:23:37.510967
+  id: 78
+  basic: f
+  locale: 
+  num_code: "408"
+currencies_153: 
+  name: Uruguayan peso
+  created_at: 2011-04-29 09:23:38.911636
+  char_code: UYU
+  updated_at: 2011-04-29 09:23:38.911636
+  id: 153
+  basic: f
+  locale: 
+  num_code: "858"
+currencies_124: 
+  name: Rwandan franc
+  created_at: 2011-04-29 09:23:38.386805
+  char_code: RWF
+  updated_at: 2011-04-29 09:23:38.386805
+  id: 124
+  basic: f
+  locale: 
+  num_code: "646"
+currencies_20: 
+  name: Bolivian Mvdol (funds code)
+  created_at: 2011-04-29 09:23:36.551841
+  char_code: BOV
+  updated_at: 2011-04-29 09:23:36.551841
+  id: 20
+  basic: f
+  locale: 
+  num_code: "984"
+currencies_79: 
+  name: South Korean won
+  created_at: 2011-04-29 09:23:37.527144
+  char_code: KRW
+  updated_at: 2011-04-29 09:23:37.527144
+  id: 79
+  basic: f
+  locale: 
+  num_code: "410"
+currencies_125: 
+  name: Saudi riyal
+  created_at: 2011-04-29 09:23:38.400152
+  char_code: SAR
+  updated_at: 2011-04-29 09:23:38.400152
+  id: 125
+  basic: f
+  locale: 
+  num_code: "682"
+currencies_21: 
+  name: Brazilian real
+  created_at: 2011-04-29 09:23:36.568198
+  char_code: BRL
+  updated_at: 2011-04-29 09:23:36.568198
+  id: 21
+  basic: f
+  locale: 
+  num_code: "986"
+currencies_154: 
+  name: Uzbekistan som
+  created_at: 2011-04-29 09:23:38.947854
+  char_code: UZS
+  updated_at: 2011-04-29 09:23:38.947854
+  id: 154
+  basic: f
+  locale: 
+  num_code: "860"
+currencies_126: 
+  name: Solomon Islands dollar
+  created_at: 2011-04-29 09:23:38.416063
+  char_code: SBD
+  updated_at: 2011-04-29 09:23:38.416063
+  id: 126
+  basic: f
+  locale: 
+  num_code: 090
+currencies_22: 
+  name: Bahamian dollar
+  created_at: 2011-04-29 09:23:36.584166
+  char_code: BSD
+  updated_at: 2011-04-29 09:23:36.584166
+  id: 22
+  basic: f
+  locale: 
+  num_code: "044"
+currencies_50: 
+  name: Fiji dollar
+  created_at: 2011-04-29 09:23:37.061236
+  char_code: FJD
+  updated_at: 2011-04-29 09:23:37.061236
+  id: 50
+  basic: f
+  locale: 
+  num_code: "242"
+currencies_155: 
+  name: "Venezuelan bol\xC3\xADvar fuerte"
+  created_at: 2011-04-29 09:23:39.045628
+  char_code: VEF
+  updated_at: 2011-04-29 09:23:39.045628
+  id: 155
+  basic: f
+  locale: 
+  num_code: "937"
+currencies_127: 
+  name: Seychelles rupee
+  created_at: 2011-04-29 09:23:38.431753
+  char_code: SCR
+  updated_at: 2011-04-29 09:23:38.431753
+  id: 127
+  basic: f
+  locale: 
+  num_code: "690"
+currencies_23: 
+  name: Bhutanese ngultrum
+  created_at: 2011-04-29 09:23:36.600468
+  char_code: BTN
+  updated_at: 2011-04-29 09:23:36.600468
+  id: 23
+  basic: f
+  locale: 
+  num_code: "064"
+currencies_51: 
+  name: Falkland Islands pound
+  created_at: 2011-04-29 09:23:37.077003
+  char_code: FKP
+  updated_at: 2011-04-29 09:23:37.077003
+  id: 51
+  basic: f
+  locale: 
+  num_code: "238"
+currencies_156: 
+  name: "Vietnamese \xC4\x91\xE1\xBB\x93ng"
+  created_at: 2011-04-29 09:23:39.062808
+  char_code: VND
+  updated_at: 2011-04-29 09:23:39.062808
+  id: 156
+  basic: f
+  locale: 
+  num_code: "704"
+currencies_128: 
+  name: Sudanese pound
+  created_at: 2011-04-29 09:23:38.445575
+  char_code: SDG
+  updated_at: 2011-04-29 09:23:38.445575
+  id: 128
+  basic: f
+  locale: 
+  num_code: "938"
+currencies_80: 
+  name: Kuwaiti dinar
+  created_at: 2011-04-29 09:23:37.551871
+  char_code: KWD
+  updated_at: 2011-04-29 09:23:37.551871
+  id: 80
+  basic: f
+  locale: 
+  num_code: "414"
+currencies_52: 
+  name: Pound sterling
+  created_at: 2011-04-29 09:23:37.093200
+  char_code: GBP
+  updated_at: 2011-04-29 09:23:37.093200
+  id: 52
+  basic: f
+  locale: 
+  num_code: "826"
+currencies_24: 
+  name: Botswana pula
+  created_at: 2011-04-29 09:23:36.618134
+  char_code: BWP
+  updated_at: 2011-04-29 09:23:36.618134
+  id: 24
+  basic: f
+  locale: 
+  num_code: "072"
+currencies_157: 
+  name: Vanuatu vatu
+  created_at: 2011-04-29 09:23:39.080968
+  char_code: VUV
+  updated_at: 2011-04-29 09:23:39.080968
+  id: 157
+  basic: f
+  locale: 
+  num_code: "548"
+currencies_129: 
+  name: Swedish krona/kronor
+  created_at: 2011-04-29 09:23:38.460038
+  char_code: SEK
+  updated_at: 2011-04-29 09:23:38.460038
+  id: 129
+  basic: f
+  locale: 
+  num_code: "752"
+currencies_81: 
+  name: Cayman Islands dollar
+  created_at: 2011-04-29 09:23:37.568851
+  char_code: KYD
+  updated_at: 2011-04-29 09:23:37.568851
+  id: 81
+  basic: f
+  locale: 
+  num_code: "136"
+currencies_53: 
+  name: Georgian lari
+  created_at: 2011-04-29 09:23:37.108997
+  char_code: GEL
+  updated_at: 2011-04-29 09:23:37.108997
+  id: 53
+  basic: f
+  locale: 
+  num_code: "981"
+currencies_25: 
+  name: Belarusian ruble
+  created_at: 2011-04-29 09:23:36.641953
+  char_code: BYR
+  updated_at: 2011-04-29 09:23:36.641953
+  id: 25
+  basic: f
+  locale: 
+  num_code: "974"
+currencies_158: 
+  name: Samoan tala
+  created_at: 2011-04-29 09:23:39.098484
+  char_code: WST
+  updated_at: 2011-04-29 09:23:39.098484
+  id: 158
+  basic: f
+  locale: 
+  num_code: "882"
+currencies_82: 
+  name: Kazakhstani tenge
+  created_at: 2011-04-29 09:23:37.582324
+  char_code: KZT
+  updated_at: 2011-04-29 09:23:37.582324
+  id: 82
+  basic: f
+  locale: 
+  num_code: "398"
+currencies_54: 
+  name: Ghanaian cedi
+  created_at: 2011-04-29 09:23:37.121674
+  char_code: GHS
+  updated_at: 2011-04-29 09:23:37.121674
+  id: 54
+  basic: f
+  locale: 
+  num_code: "936"
+currencies_26: 
+  name: Belize dollar
+  created_at: 2011-04-29 09:23:36.658136
+  char_code: BZD
+  updated_at: 2011-04-29 09:23:36.658136
+  id: 26
+  basic: f
+  locale: 
+  num_code: 084
+currencies_159: 
+  name: CFA franc BEAC
+  created_at: 2011-04-29 09:23:39.116275
+  char_code: XAF
+  updated_at: 2011-04-29 09:23:39.116275
+  id: 159
+  basic: f
+  locale: 
+  num_code: "950"
+currencies_83: 
+  name: Lao kip
+  created_at: 2011-04-29 09:23:37.598030
+  char_code: LAK
+  updated_at: 2011-04-29 09:23:37.598030
+  id: 83
+  basic: f
+  locale: 
+  num_code: "418"
+currencies_55: 
+  name: Gibraltar pound
+  created_at: 2011-04-29 09:23:37.133980
+  char_code: GIP
+  updated_at: 2011-04-29 09:23:37.133980
+  id: 55
+  basic: f
+  locale: 
+  num_code: "292"
+currencies_27: 
+  name: Canadian dollar
+  created_at: 2011-04-29 09:23:36.674247
+  char_code: CAD
+  updated_at: 2011-04-29 09:23:36.674247
+  id: 27
+  basic: f
+  locale: 
+  num_code: "124"
+currencies_100: 
+  name: Maldivian rufiyaa
+  created_at: 2011-04-29 09:23:37.992164
+  char_code: MVR
+  updated_at: 2011-04-29 09:23:37.992164
+  id: 100
+  basic: f
+  locale: 
+  num_code: "462"
