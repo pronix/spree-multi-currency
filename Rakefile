@@ -44,6 +44,7 @@ task :test_app do
         run 'rake spree_auth:install'
         run 'rake multi_currencies:install'
         run "rake spree_sample:install"
+        run "sed -i 's/development/cucumber/' ../db/sample/payment_methods.yml"
         run 'rake db:seed'
       end
     end

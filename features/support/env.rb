@@ -11,5 +11,6 @@ ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
 
 
 # load shared env with features
+puts "#{ENV['SPREE_GEM_PATH']}/features/support/env"
 require File.expand_path("#{ENV['SPREE_GEM_PATH']}/features/support/env", __FILE__)
 Capybara.default_driver = :selenium
