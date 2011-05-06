@@ -7,7 +7,16 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/packagetask'
 require 'rake/gempackagetask'
+
+# require define path to spree project
 ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
+# or define spree as gem in Gemfile
+# and decomment this
+# gemfile = Pathname.new("Gemfile").expand_path
+# lockfile = gemfile.dirname.join('Gemfile.lock')
+# definition = Bundler::Definition.build(gemfile, lockfile, nil)
+# sc=definition.index.search "spree"
+# ENV['SPREE_GEM_PATH'] = sc[0].loaded_from.gsub(/\/[a-z_]*.gemspec$/,'')
 
 spec = eval(File.read('multi_currencies.gemspec'))
 Rake::GemPackageTask.new(spec) do |p|

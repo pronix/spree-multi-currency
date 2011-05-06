@@ -77,5 +77,14 @@ Settings
 For tests
 _________________________
   in Rakefile defined
-   ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
-   and spree-multi_currencies as gem in /home/dima/project/spree/spree-multi_currencies
+  # require define path to spree project
+  ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
+  # or define spree as gem in Gemfile
+  # and decomment this
+  # gemfile = Pathname.new("Gemfile").expand_path
+  # lockfile = gemfile.dirname.join('Gemfile.lock')
+  # definition = Bundler::Definition.build(gemfile, lockfile, nil)
+  # sc=definition.index.search "spree"
+  # ENV['SPREE_GEM_PATH'] = sc[0].loaded_from.gsub(/\/[a-z_]*.gemspec$/,'')
+
+
