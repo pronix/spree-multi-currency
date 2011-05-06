@@ -13,6 +13,16 @@ Order.class_eval do
     self.total = read_attribute(:item_total) + adjustment_total
   end
 
+  def rate_hash
+    @rate_hash ||= available_shipping_methods(:front_end).collect do |ship_method|
+      next unless cost = ship_method.calculator.compute(self)
+      { :id => ship_method.id,
+        :shipping_method => ship_method,
+        :name => ship_method.name,
+        :cost => Currency.conversion_to_current(cost)
+      }
+    end.compact.sort_by{|r| r[:cost]}
+  end
 
   def update!
     update_totals
