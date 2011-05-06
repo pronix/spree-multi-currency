@@ -35,7 +35,7 @@ task :default => [:spec, :cucumber ]
 
 desc "Regenerates a rails 3 app for testing"
 task :test_app do
-  require '../lib/generators/spree/test_app_generator'
+  require "#{ENV['SPREE_GEM_PATH']}/lib/generators/spree/test_app_generator"
   class CoreTestAppGenerator < Spree::Generators::TestAppGenerator
 
     def install_spree_core
@@ -43,6 +43,7 @@ task :test_app do
         run 'rake spree_core:install'
         run 'rake spree_auth:install'
         run 'rake multi_currencies:install'
+        run "rake spree_sample:install"
         run 'rake db:seed'
       end
     end
@@ -56,6 +57,7 @@ task :test_app do
       <<-gems
 gem 'multi_currencies', :path => \'#{File.dirname(__FILE__)}\'
 gem 'spree_core', :path => \'#{ENV['SPREE_GEM_PATH']}/core\'
+gem 'spree_sample', :path => \'#{ENV['SPREE_GEM_PATH']}/sample\'
 gem 'spree_auth', :path => \'#{ENV['SPREE_GEM_PATH']}/auth\'
       gems
     end
