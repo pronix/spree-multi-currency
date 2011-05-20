@@ -64,6 +64,9 @@ class Currency < ActiveRecord::Base
     def conversion_to_current(value, options = { })
       load_rate(options)
       convert(value, @basic.char_code, @current.char_code)
+    rescue => ex
+      Rails.logger.error " [ Currency ] :#{ex.inspect}"
+      value
     end
 
     # Конвертируем значение из валюты текущей локали к основной валюте
@@ -73,13 +76,16 @@ class Currency < ActiveRecord::Base
     def conversion_from_current(value, options={})
       load_rate(options)
       convert(value,  @current.char_code, @basic.char_code)
+    rescue => ex
+      Rails.logger.error " [ Currency ] :#{ex.inspect}"
+      value
     end
 
 
     # Основная валюта
     def basic
-      @basic ||= first(:conditions => { :basic => true })
-     end
+      @basic ||= where(:basic => true).first
+    end
 
     def get(num_code, options ={ })
       find_by_num_code(num_code) || create(options)
