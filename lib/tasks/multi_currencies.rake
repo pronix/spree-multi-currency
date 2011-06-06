@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'open-uri'
 require 'nokogiri'
 # add custom rake tasks here
