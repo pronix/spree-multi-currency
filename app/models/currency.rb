@@ -34,8 +34,7 @@ class Currency < ActiveRecord::Base
     # Текущая валюта
     #
     def current( current_locale = nil )
-      @current ||= locale(current_locale || I18n.locale).first
-      @current
+      @current = locale(current_locale || I18n.locale).first
     end
 
     def current!(current_locale = nil )
