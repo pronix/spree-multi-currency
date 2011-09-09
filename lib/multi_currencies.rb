@@ -1,5 +1,5 @@
 require 'spree_core'
-require 'multi_currencies_hooks'
+
 
 module MultiCurrencies
   class Engine < Rails::Engine
