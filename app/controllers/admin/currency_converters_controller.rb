@@ -5,6 +5,6 @@ class Admin::CurrencyConvertersController < Admin::BaseController
   destroy.wants.html { redirect_to collection_url }
   private
   def collection
-    @collection = CurrencyConverter.all.paginate :per_page => 15, :page     => params[:page]
+    @collection = CurrencyConverter.page(params[:page]).order('created_at DESC')
   end
 end
