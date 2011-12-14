@@ -22,9 +22,10 @@ Gem::Specification.new do |s|
   s.require_path = ['lib']
 
 
-  s.add_dependency('spree_core', '>= 0.50.0')
-  s.add_dependency('nokogiri',   '>= 1.4.4')
-  s.add_dependency('money',      '>= 3.6.1')
-  s.add_dependency('json',       '>= 1.5.1')
+  s.add_dependency('spree_core',		'>= 0.50.0')
+  s.add_dependency('nokogiri',  		'>= 1.4.4')
+  s.add_dependency('money',     		'>= 3.6.1')
+  s.add_dependency('json',      		'>= 1.5.1')
+  s.add_dependency('will_paginate',	'~> 3.0.pre4')
   s.add_development_dependency("rspec", ">= 2.5.0")
 end
