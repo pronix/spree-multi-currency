@@ -1,10 +1,10 @@
 <h1><%= t("new_currency") %></h1>
-<% form_for(:currency,  :url => collection_url) do |f| %>
-<%= render :partial => "form", :locals => { :f => f } %>
-<p class="form-buttons">
-  <%= button t("create") %>
-  <%= link_to t('cancel'), collection_url %>
-</p>
-<% end -%>
+<%= form_for(:currency,  :url => collection_url) do |f| %>
+	<%= render :partial => "form", :locals => { :f => f } %>
+	<p class="form-buttons">
+		<%= button t("create") %>
+		<%= link_to t('cancel'), collection_url %>
+	</p>
+<% end %>
 
 
