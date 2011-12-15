@@ -1,0 +1,39 @@
+currency_USD: &usd
+  number:
+    currency:
+      format:
+        format: "%u%n"
+        unit: "$"
+        separator: "."
+        delimiter: ","
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+currency_RUB:
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "руб."
+        separator: "."
+        delimiter: " "
+        precision: 2
+
+currency_EUR:
+  <<: *usd
+  number:
+    currency:
+      format:
+        format: "%u%n"
+        unit: "€"
+
+currency_DKK:
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "kr."
+        separator: ","
+        delimiter: "."
+        precision: 2
