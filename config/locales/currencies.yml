@@ -37,3 +37,13 @@ currency_DKK:
         separator: ","
         delimiter: "."
         precision: 2
+
+currency_GBP:
+  number:
+    currency:
+      format:
+        format: "%u%n"
+        unit: "£"
+        separator: "."
+        delimiter: ","
+        precision: 2
