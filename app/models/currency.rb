@@ -23,16 +23,15 @@ class Currency < ActiveRecord::Base
     need_split ? read_attribute(:locale).to_s.split(',') : read_attribute(:locale).to_s
   end
 
-  # Сбрасываем для всех валют флаг "основная", кроме текущей если она установлена как основная
-  #
+  # We can only have one main currency.
+  # Therefore we reset all other currencies but the current if it's the main.
   def reset_basic_currency
     self.class.where("id != ?", self.id).update_all(:basic => false) if self.basic?
   end
 
   class << self
 
-    # Текущая валюта
-    #
+    # Get the current locale
     def current( current_locale = nil )
       @current = locale(current_locale || I18n.locale).first
     end
@@ -51,15 +50,16 @@ class Currency < ActiveRecord::Base
       end
 
     end
-
+		
+		# Exchanges money between two currencies.
+		# E.g. with these args: 150, DKK, GBP returns 16.93
     def convert(value, from, to)
       ( Money.new(value.to_f * 10000, from).exchange_to(to).to_f / 100).round(2)
     end
-
-    # Конвертируем сумму к валюте текущей локале
-    # Если валюта или локаль не найдена то возвращается та же сумма
-    # Money.new(value.to_f, "Основаня").exchange_to("К Текущей").to_f
-    #Currency.conversion_to_current(100, :locale => "ru")
+		
+		# Converts the basic currency value to a 'localized' value.
+    # In the parameters you can specify the locale you wish to convert TO.
+		# Usage: Currency.conversion_to_current(100, :locale => "da")
     def conversion_to_current(value, options = { })
       load_rate(options)
       convert(value, @basic.char_code, @current.char_code)
@@ -67,21 +67,21 @@ class Currency < ActiveRecord::Base
       Rails.logger.error " [ Currency ] :#{ex.inspect}"
       value
     end
-
-    # Конвертируем значение из валюты текущей локали к основной валюте
-    # в параметрах можно указать локаль из которой можно делать конвертацияю :locale
-    # и дату курса :date, курс берется последний найденный до указанной даты
-    #Currency.conversion_from_current(100, :locale => "ru")
+		
+		# Converts the currency value of the current locale to the basic currency.
+    # In the parameters you can specify the locale you wish to convert FROM.
+		# Usage: Currency.conversion_from_current(100, :locale => "da")
     def conversion_from_current(value, options={})
       load_rate(options)
-      convert(value,  @current.char_code, @basic.char_code)
+      debugger
+      convert(value, @current.char_code, @basic.char_code)
     rescue => ex
       Rails.logger.error " [ Currency ] :#{ex.inspect}"
       value
     end
 
 
-    # Основная валюта
+    # Retrieves the main currency.
     def basic
       @basic ||= where(:basic => true).first
     end
@@ -96,6 +96,6 @@ class Currency < ActiveRecord::Base
       Money.add_rate(from, to, rate.to_f ) unless Money.default_bank.get_rate(from, to)
     end
 
-  end # end class << self
+  end
 
 end
