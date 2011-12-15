@@ -1,5 +1,4 @@
 require 'spree_core'
-#require 'will_paginate'
 
 module MultiCurrencies
   class Engine < Rails::Engine
