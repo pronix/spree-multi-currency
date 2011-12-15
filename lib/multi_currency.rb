@@ -9,6 +9,7 @@ module MultiCurrency
   #  rate_at_date - использовать курс валюты на дату
   def multi_currency(*args)
     options = args.extract_options!
+    debugger
     [args].flatten.compact.each do |number_field|
 
       define_method(number_field.to_sym) do
