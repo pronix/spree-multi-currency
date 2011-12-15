@@ -75,7 +75,7 @@ namespace :multi_currencies do
     task :google, [:currency, :load_currencies] => :environment do |t, args|
       Rake::Task["multi_currencies:currency:iso4217"].invoke if args.load_currencies
       default_currency = Currency.where(" char_code = :currency_code or num_code = :currency_code",
-                                        :currency_code => args.currency || 978).first ||
+                                        :currency_code => args.currency.upcase || 978).first ||
                          Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
       default_currency.basic!
       date = Time.now
