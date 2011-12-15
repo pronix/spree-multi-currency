@@ -73,6 +73,7 @@ class Currency < ActiveRecord::Base
 		# Usage: Currency.conversion_from_current(100, :locale => "da")
     def conversion_from_current(value, options={})
       load_rate(options)
+      value.gsub(",",".")
       debugger
       convert(value, @current.char_code, @basic.char_code)
     rescue => ex
