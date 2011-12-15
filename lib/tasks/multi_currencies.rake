@@ -74,21 +74,22 @@ namespace :multi_currencies do
     desc "Rates from Google"
     task :google, [:currency, :load_currencies] => :environment do |t, args|
       Rake::Task["multi_currencies:currency:iso4217"].invoke if args.load_currencies
-      default_currency = Currency.where(" char_code = :currency_code or num_code = :currency_code",
-                                        :currency_code => args.currency.upcase || 978).first ||
+      default_currency = Currency.where("char_code = :currency_code or num_code = :currency_code", :currency_code => args.currency.upcase || 978).first ||
                          Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
       default_currency.basic!
       date = Time.now
-      Currency.all.each { |currency|
+      puts "Loads currency data from Google using #{default_currency}"
+      Currency.all.each do |currency|
         unless currency == default_currency
           url = "http://www.google.com/ig/calculator?hl=en&q=1#{ currency.char_code }%3D%3F#{ default_currency.char_code }"
+          puts url
           @data = JSON.parse(open(url).read.gsub(/lhs:|rhs:|error:|icc:/){ |x| "\"#{x[0..-2]}\":"})
           if @data["error"].blank?
             @value = BigDecimal(@data["rhs"].split(' ')[0])
             CurrencyConverter.add(currency, date, @value, 1)
           end
         end
-      }
+      end
     end
   end
 
