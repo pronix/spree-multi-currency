@@ -73,9 +73,10 @@ class Currency < ActiveRecord::Base
 		# Usage: Currency.conversion_from_current(100, :locale => "da")
     def conversion_from_current(value, options={})
       load_rate(options)
-      # Replace comma with dot as decimal mark for those languages that use this.
+      
+      # Replace commas with dots as decimal mark for those languages that use this.
       value = value.gsub(",",".")
-      debugger
+      
       convert(value, @current.char_code, @basic.char_code)
     rescue => ex
       Rails.logger.error " [ Currency ] :#{ex.inspect}"
@@ -93,7 +94,7 @@ class Currency < ActiveRecord::Base
     end
 
     private
-
+		
     def add_rate(from, to, rate)
       Money.add_rate(from, to, rate.to_f ) unless Money.default_bank.get_rate(from, to)
     end
