@@ -3,17 +3,17 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'multi_currencies'
+  s.name        = 'spree_multi_currency'
   s.version     = '1.0.3'
   s.summary     = 'Add gem summary here'
   s.required_ruby_version = '>= 1.8.7'
   s.authors     = ["Pronix LLC"]
   s.email       = ["parallel588@gmail.com","root@tradefast.ru"]
   s.homepage    = ""
-  s.summary     = %q{spree-multi-currency}
-  s.description = %q{spree-multi-currency}
+  s.summary     = %q{spree_multi_currency}
+  s.description = %q{spree_multi_currency}
 
-  s.rubyforge_project = "spree-multi-currency"
+  # s.rubyforge_project = "spree-multi-currency"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

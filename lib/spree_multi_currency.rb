@@ -1,4 +1,4 @@
-module MultiCurrency
+module Spree::MultiCurrency
 
   # Order.class_eval do
   # extend MultiCurrency

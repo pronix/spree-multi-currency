@@ -1,4 +1,4 @@
 Spree::Variant.class_eval do
-  extend MultiCurrency
+  extend Spree::MultiCurrency
   multi_currency :price, :cost_price
 end
