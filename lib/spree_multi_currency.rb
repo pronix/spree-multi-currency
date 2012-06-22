@@ -1,3 +1,5 @@
+require 'spree/core'
+require 'spree_multi_currency/engine'
 module Spree::MultiCurrency
 
   # Order.class_eval do
