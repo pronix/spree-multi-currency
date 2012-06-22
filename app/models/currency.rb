@@ -50,13 +50,13 @@ class Currency < ActiveRecord::Base
       end
 
     end
-		
+
 		# Exchanges money between two currencies.
 		# E.g. with these args: 150, DKK, GBP returns 16.93
     def convert(value, from, to)
       ( Money.new(value.to_f * 10000, from).exchange_to(to).to_f / 100).round(2)
     end
-		
+
 		# Converts the basic currency value to a 'localized' value.
     # In the parameters you can specify the locale you wish to convert TO.
 		# Usage: Currency.conversion_to_current(100, :locale => "da")
@@ -67,16 +67,16 @@ class Currency < ActiveRecord::Base
       Rails.logger.error " [ Currency ] :#{ex.inspect}"
       value
     end
-		
+
 		# Converts the currency value of the current locale to the basic currency.
     # In the parameters you can specify the locale you wish to convert FROM.
 		# Usage: Currency.conversion_from_current(100, :locale => "da")
     def conversion_from_current(value, options={})
       load_rate(options)
-      
+
       # Replace commas with dots as decimal mark for those languages that use this.
       value = value.gsub(",",".")
-      
+
       convert(value, @current.char_code, @basic.char_code)
     rescue => ex
       Rails.logger.error " [ Currency ] :#{ex.inspect}"
@@ -94,7 +94,7 @@ class Currency < ActiveRecord::Base
     end
 
     private
-		
+
     def add_rate(from, to, rate)
       Money.add_rate(from, to, rate.to_f ) unless Money.default_bank.get_rate(from, to)
     end
