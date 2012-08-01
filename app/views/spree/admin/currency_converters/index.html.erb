@@ -19,7 +19,7 @@
 	</tr>
   </thead>
   <tbody>
-    <% collection.each do |currency_converter|%>
+    <% @currency_converters.each do |currency_converter|%>
     <tr id="<%= dom_id currency_converter %>">
       <td><%=  currency_converter.date_req %></td>
       <td width="350px"><%= currency_converter.currency.try(:name) %></td>
@@ -34,5 +34,5 @@
   </tbody>
 </table>
 
-<%= paginate collection %>
+<%#= paginate @currency_converters %>
 
