@@ -36,11 +36,11 @@ module Spree
 
       # Get the current locale
       def current( current_locale = nil )
-        @current = locale(current_locale || I18n.locale).first
+        @current ||= locale(current_locale || I18n.locale).first
       end
 
       def current!(current_locale = nil )
-        @current = current_locale.is_a?(Currency) ? current_locale : locale(current_locale||I18n.locale).first
+        @current = current_locale.is_a?(Spree::Currency) ? current_locale : locale(current_locale||I18n.locale).first
       end
 
       def load_rate(options= {})
