@@ -21,11 +21,14 @@ currency_RUB:
         precision: 2
 
 currency_EUR:
+  <<: *usd
   number:
     currency:
       format:
         format: "%u%n"
         unit: "€"
+        separator: ","
+        delimiter: "."
 
 currency_DKK:
   number:
