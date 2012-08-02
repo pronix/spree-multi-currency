@@ -21,7 +21,6 @@ currency_RUB:
         precision: 2
 
 currency_EUR:
-  <<: *usd
   number:
     currency:
       format:
