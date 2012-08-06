@@ -27,6 +27,8 @@ currency_EUR:
       format:
         format: "%u%n"
         unit: "€"
+        separator: ","
+        delimiter: "."
 
 currency_DKK:
   number:

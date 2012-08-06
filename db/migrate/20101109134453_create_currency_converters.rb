@@ -1,6 +1,6 @@
 class CreateCurrencyConverters < ActiveRecord::Migration
   def self.up
-    create_table :currency_converters do |t|
+    create_table :spree_currency_converters do |t|
       t.integer  :currency_id, :null => false
       t.datetime :date_req, :null => false
       t.float    :nominal, :null => false, :default => 1
