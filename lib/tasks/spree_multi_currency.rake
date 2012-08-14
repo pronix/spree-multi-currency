@@ -15,7 +15,7 @@ namespace :spree_multi_currency do
       data.css("table:first tr")[1..-1].map{ |d|
         Hash[*keys.zip(d.css("td").map {|x| x.text.strip }).flatten]
       }.each { |n|
-        Currency.find_by_num_code(n[:num_code]) ||  Currency.create(n.except(:discharge).except(:countries))
+        Spree::Currency.find_by_num_code(n[:num_code]) ||  Spree::Currency.create(n.except(:discharge).except(:countries))
       }
 
     end
@@ -28,7 +28,7 @@ namespace :spree_multi_currency do
       data.css("table:eq(2) tr")[1..-1].map{|d|
         Hash[*keys.zip(d.css("td").map {|x| x.text.strip }).flatten]
       }.each { |n|
-        Currency.find_by_num_code(n[:num_code]) ||  Currency.create(n.except(:discharge).except(:countries))
+        Spree::Currency.find_by_num_code(n[:num_code]) ||  Spree::Currency.create(n.except(:discharge).except(:countries))
       }
     end
 
@@ -37,7 +37,7 @@ namespace :spree_multi_currency do
   namespace :rates do
     desc "Курс Сбербанка РФ http://www.cbr.ru"
     task :cbr => :environment do
-      rub  = Currency.get("643", { :num_code => "643", :char_code => "RUB", :name => "Российский рубль"})
+      rub  = Spree::Currency.get("643", { :num_code => "643", :char_code => "RUB", :name => "Российский рубль"})
       rub.basic!
       url = "http://www.cbr.ru/scripts/XML_daily.asp?date_req=#{Time.now.strftime('%d/%m/%Y')}"
       data = Nokogiri::XML.parse(open(url))
@@ -49,44 +49,44 @@ namespace :spree_multi_currency do
         name       = valute.xpath("./Name").text.to_s
         value      = valute.xpath("./Value").text.gsub(',','.').to_f
         nominal    = valute.xpath("./Nominal").text
-        currency   = Currency.get(num_code, { :num_code => num_code, :char_code => char_code, :name => name})
-        currency && CurrencyConverter.add(currency, date, value, nominal)
+        currency   = Spree::Currency.get(num_code, { :num_code => num_code, :char_code => char_code, :name => name})
+        currency && Spree::CurrencyConverter.add(currency, date, value, nominal)
       end
     end
 
     desc "Rates from European Central Bank"
     task :ecb, [:load_currencies] => :environment do |t, args|
-      Rake::Task["multi_currencies:currency:iso4217"].invoke if args.load_currencies
-      euro  = Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
+      Rake::Task["spree_multi_currencies:currency:iso4217"].invoke if args.load_currencies
+      euro  = Spree::Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
       euro.basic!
       url = 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
       data = Nokogiri::XML.parse(open(url))
       date = Date.strptime(data.xpath('gesmes:Envelope/xmlns:Cube/xmlns:Cube').attr("time").to_s, "%Y-%m-%d")
       data.xpath('gesmes:Envelope/xmlns:Cube/xmlns:Cube//xmlns:Cube').each do |exchange_rate|
         char_code      = exchange_rate.attribute("currency").value.to_s.strip
-        value, nominal = exchange_rate.attribute("rate").value.to_f, 1
-        currency = Currency.find_by_char_code(char_code)
-        currency && CurrencyConverter.add(currency, date, value, nominal)
+        nominal, value = exchange_rate.attribute("rate").value.to_f, 1
+        currency = Spree::Currency.find_by_char_code(char_code)
+        currency && Spree::CurrencyConverter.add(currency, date, value, nominal)
       end
 
     end
 
     desc "Rates from Google"
     task :google, [:currency, :load_currencies] => :environment do |t, args|
-      Rake::Task["multi_currencies:currency:iso4217"].invoke if args.load_currencies
-      default_currency = Currency.where("char_code = :currency_code or num_code = :currency_code", :currency_code => args.currency.upcase || 978).first ||
-                         Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
+      Rake::Task["spree_multi_currencies:currency:iso4217"].invoke if args.load_currencies
+      default_currency = Spree::Currency.where("char_code = :currency_code or num_code = :currency_code", :currency_code => args.currency.upcase || 978).first ||
+                         Spree::Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
       default_currency.basic!
       date = Time.now
       puts "Loads currency data from Google using #{default_currency}"
-      Currency.all.each do |currency|
+      Spree::Currency.all.each do |currency|
         unless currency == default_currency
           url = "http://www.google.com/ig/calculator?hl=en&q=1#{ currency.char_code }%3D%3F#{ default_currency.char_code }"
           puts url
           @data = JSON.parse(open(url).read.gsub(/lhs:|rhs:|error:|icc:/){ |x| "\"#{x[0..-2]}\":"})
           if @data["error"].blank?
             @value = BigDecimal(@data["rhs"].split(' ')[0])
-            CurrencyConverter.add(currency, date, @value, 1)
+            Spree::CurrencyConverter.add(currency, date, @value, 1)
           end
         end
       end

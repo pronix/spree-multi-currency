@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 class CreateCurrencies < ActiveRecord::Migration
   def self.up
-    create_table :currencies do |t|
+    create_table :spree_currencies do |t|
       t.string  :num_code, :null => false
       t.string  :char_code, :null => false
       t.string  :name, :null => false

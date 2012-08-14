@@ -1,5 +1,5 @@
 # Put your extension routes here.
-Rails.application.routes.draw do
+Spree::Core::Engine.routes.prepend do
   match "currency/:id" => "currency#set", :as => :currency
   namespace :admin do
     resources :currencies

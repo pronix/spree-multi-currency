@@ -3,7 +3,7 @@
     <td><%= t("currency_converter_currency") %>: </td>
     <td>
       <%= error_message_on :currency_converter, :currency_id %>
-      <%= f.select :currency_id, Currency.all.map{|x| [x.name, x.id]}  %>
+      <%= f.select :currency_id, Spree::Currency.all.map{|x| [x.name, x.id]}  %>
     </td>
   </tr>
 
@@ -11,7 +11,7 @@
     <td><%= t("currency_converter_date_req") %>: </td>
     <td>
       <%= error_message_on :currency_converter, :date_req %>
-      <%= f.spree_date_picker :date_req  %>
+      <%= f.text_field :date_req, :class => 'datepicker'  %>
     </td>
   </tr>
 

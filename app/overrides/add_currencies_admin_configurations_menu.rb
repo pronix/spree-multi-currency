@@ -1,6 +1,6 @@
-Deface::Override.new(:virtual_path => "admin/configurations/index",
+Deface::Override.new(:virtual_path => "spree/admin/configurations/index",
                      :name => "currencies_admin_configurations_menu",
-                     :insert_after => "[data-hook='admin_configurations_menu'], #admin_configurations_menu[data-hook]",
+                     :insert_bottom => "[data-hook='admin_configurations_menu']",
                      :disabled => false,
                      :text => "
 <% if current_user.has_role?(:admin) %>

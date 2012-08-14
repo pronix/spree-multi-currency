@@ -6,7 +6,7 @@ module ActionView
         return nil if number.nil?
 
         options.symbolize_keys!
-        options[:locale] = "currency_#{ Currency.current.try(:char_code) || I18n.default_locale }"
+        options[:locale] = "currency_#{ Spree::Currency.current.try(:char_code) || I18n.default_locale }"
         defaults  = I18n.translate('number.format', :locale => options[:locale], :default => {})
         currency  = I18n.translate('number.currency.format', :locale => options[:locale], :default => {})
         defaults  = DEFAULT_CURRENCY_VALUES.merge(defaults).merge!(currency)
