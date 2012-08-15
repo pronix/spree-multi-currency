@@ -6,7 +6,7 @@ Installation
 ---------
 Add to Gemfile
 
-    gem "spree_multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
+    gem "spree_multi_currency", :git => "git://github.com/pronix/spree-multi-currency.git"
 
 Run
 ---
