@@ -7,9 +7,9 @@ describe "Currencies changing" do
     usd = Spree::Currency.create(:char_code => "USD", :locale => "en", :basic => true)
     rub.currency_coverters << Spree::CurrencyConverter.create(:nominal => 32, :value => 1.0)
     product = FactoryGirl.create(:product, :price => 1)
-    I18n.current_locale = "en"
+    I18n.locale = "en"
     product.price.should eql 1
-    I18n.current_locale = "ru"
+    I18n.locale = "ru"
     product.price.should eql 32
   end  
 end
