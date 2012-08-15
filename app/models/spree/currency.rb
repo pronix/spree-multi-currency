@@ -12,7 +12,7 @@ module Spree
     scope :locale, lambda{|str| where("locale like ?", "%#{str}%")}
     after_save :reset_basic_currency
 
-    attr_accessible :basic, :locale
+    attr_accessible :basic, :locale, :char_code, :num_code, :name
 
     def basic!
       self.class.update_all(:basic => false) && update_attribute(:basic, true)

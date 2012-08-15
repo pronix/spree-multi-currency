@@ -4,7 +4,6 @@ module ActionView
 
       def number_to_currency(number, options = {})
         return nil if number.nil?
-
         options.symbolize_keys!
         options[:locale] = "currency_#{ Spree::Currency.current.try(:char_code) || I18n.default_locale }"
         defaults  = I18n.translate('number.format', :locale => options[:locale], :default => {})

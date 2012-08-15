@@ -3,7 +3,7 @@
 require 'open-uri'
 require 'nokogiri'
 # add custom rake tasks here
-namespace :spree_multi_currency do
+namespace :spree_multi_currencies do
 
   namespace :currency do
     desc "Общероссийский классификатор валют (сокращ. ОКВ) - http://ru.wikipedia.org/wiki/Общероссийский_классификатор_валют"
