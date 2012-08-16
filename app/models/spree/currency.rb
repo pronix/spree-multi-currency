@@ -77,7 +77,7 @@ module Spree
         load_rate(options)
 
         # Replace commas with dots as decimal mark for those languages that use this.
-        value = value.gsub(",","")
+        (value =~ /\./) ? value.gsub!(",","") : value.gsub!(",",".")
 
         convert(value, @current.char_code, @basic.char_code)
       rescue => ex
