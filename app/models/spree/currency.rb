@@ -46,7 +46,6 @@ module Spree
       def load_rate(options= {})
         current(options[:locale] || I18n.locale)
         basic
-
         if @rate = @current.currency_converters.get_rate(options[:date] || Time.now)
           add_rate(@basic.char_code,   @current.char_code, @rate.nominal/@rate.value.to_f)
           add_rate(@current.char_code, @basic.char_code,   @rate.value.to_f)
@@ -78,7 +77,7 @@ module Spree
         load_rate(options)
 
         # Replace commas with dots as decimal mark for those languages that use this.
-        value = value.gsub(",",".")
+        value = value.gsub(",","")
 
         convert(value, @current.char_code, @basic.char_code)
       rescue => ex
