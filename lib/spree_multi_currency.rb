@@ -8,8 +8,8 @@ module Spree::MultiCurrency
   # multi_currency :item_total, :total,
   #                :rate_at_date => lambda{ |t| t.created_at },
   #                :only_read => true
-  #  only_read - выполнять перевод из одной валюты в другую только для вывода
-  #  rate_at_date - использовать курс валюты на дату
+  #  only_read - define just the getter method (and not the setter)
+  #  rate_at_date - use the exchange rate at the specified date
   def multi_currency(*args)
     options = args.extract_options!
     [args].flatten.compact.each do |number_field|
