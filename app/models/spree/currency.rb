@@ -77,7 +77,15 @@ module Spree
         load_rate(options)
 
         # Replace commas with dots as decimal mark for those languages that use this.
-        (value =~ /\./) ? value.gsub!(",","") : value.gsub!(",",".")
+
+        # 2,000.00 => 2000.00
+        value.gsub!(",","") if (value =~ /\,[0-9]+\./)
+
+        # 2.000,00 => 2000.00
+        value.gsub!(".","").gsub!(",",".") if (value =~ /\.[0-9]+\,/)
+
+        # 2000,00 => 2000.00
+        value.gsub!(",","") if (value =~ /\.[0-9]+\,/)
 
         convert(value, @current.char_code, @basic.char_code)
       rescue => ex
