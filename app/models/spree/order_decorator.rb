@@ -14,15 +14,23 @@ Spree::Order.class_eval do
   end
 
   def rate_hash
-    @rate_hash ||= available_shipping_methods(:front_end).collect do |ship_method|
+    # this will return only the highest shipping cost 
+    # if the calculator fixed price (per item) was used. 
+    # not tested with any other calculators
+    highest_cost=0
+    available_shipping_methods(:front_end).collect do |ship_method|
       next unless cost = ship_method.calculator.compute(self)
-      { :id => ship_method.id,
-        :shipping_method => ship_method,
-        :name => ship_method.name,
-        :cost => Spree::Currency.conversion_to_current(cost)
-      }
-    end.compact.sort_by{|r| r[:cost]}
+      if cost > highest_cost
+        highest_cost = cost 
+        @ship_method=ship_method
+      end
+    end
+    @rate_hash ||= [{ :id => @ship_method.id,
+                          :shipping_method => @ship_method,
+                          :name => @ship_method.name,
+                          :cost => Spree::Currency.conversion_to_current(highest_cost)}]
   end
+
 
   def update!
     update_totals
