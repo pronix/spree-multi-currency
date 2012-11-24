@@ -12,7 +12,7 @@ Run
 ---
 Install the migrations for two new tables (currencies and currency conversion rates):
 
-    rake spree_multi_currencies:install:migrations
+    rake spree_multi_currency:install:migrations
     rake db:migrate
 
 Load currencies:
