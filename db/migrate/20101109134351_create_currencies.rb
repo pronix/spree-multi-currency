@@ -12,7 +12,7 @@ class CreateCurrencies < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :currencies
+    drop_table :spree_currencies
   end
 end
 
