@@ -10,6 +10,6 @@ class CreateCurrencyConverters < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :currency_converters
+    drop_table :spree_currency_converters
   end
 end
