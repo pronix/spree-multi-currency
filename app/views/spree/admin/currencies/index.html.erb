@@ -1,22 +1,29 @@
-<div class='toolbar'>
-  <ul class='actions'>
-    <li>
-      <p><%= button_link_to t("add_currency"), new_object_url, :icon => 'add' %></p>
-    </li>
-  </ul>
-  <br class='clear' />
-</div>
-<h1><%= t("list_currency") %></h1>
+<%= render(:partial => "/spree/admin/shared/configuration_menu") %>
+<% content_for :page_title do %>
+  <%= t(:list_currency) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t("add_currency"), new_object_url, :icon => 'icon-plus' %>
+  </li>
+<% end %>
 
 <table class="index">
+  <colgroup>
+    <col style="width: 20%">
+    <col style="width: 20%">
+    <col style="width: 20%">
+    <col style="width: 20%">
+    <col style="width: 20%">
+  </colgroup>
   <thead>
-	<tr>
-    <th><%= t("currency_name")%></th>
-    <th><%= t("currency_code")%></th>
-    <th><%= t("currency_locale")%></th>
-    <th><%= t("currency_basic")%></th>
-    <th><%= t("action") %></th>
-	</tr>
+  	<tr>
+      <th><%= t("currency_name")%></th>
+      <th><%= t("currency_code")%></th>
+      <th><%= t("currency_locale")%></th>
+      <th><%= t("currency_basic")%></th>
+  	</tr>
   </thead>
   <tbody>
     <% @currencies.each do |currency|%>
@@ -27,14 +34,11 @@
       </td>
       <td> <%= currency.locale(false) %></td>
       <td> <%= currency.basic %></td>
-      <td>
-      	<%= link_to_edit currency %> &nbsp;
-	      <%= link_to_delete currency %> &nbsp;
+      <td class='actions'>
+      	<%= link_to_edit currency, :no_text => true %>
+	      <%= link_to_delete currency, :no_text => true %>
       </td>
     </tr>
     <% end %>
   </tbody>
 </table>
-
-<%#= will_paginate(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") %>
-
