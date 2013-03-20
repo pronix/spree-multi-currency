@@ -1,5 +1,6 @@
 ---
 en:
+  back_to_currencies: Back to Currencies
   currency_changed: Currency changed
   currency_not_found: Currency not found
   currency_settings: Currency Settings
@@ -12,15 +13,15 @@ en:
   currency_converter_currency: Currency
   currency_converter_nominal: Nominal
   currency_converter_value: Value
-  new_currency_converter: New
-  editing_currency_converter: Edit
-  add_currency: Add currency
-  list_currency: List of currencies
+  new_currency_converter: New Converter
+  editing_currency_converter: Edit Converter
+  add_currency: Add Currency
+  list_currency: List of Currencies
   currency_name: Currency
   currency_code: Code
   currency_num_code: ISO number code
   currency_char_code: ISO char code
   currency_locale: Locale
   currency_basic: Basic currency
-  editing_currency: Edit
-  new_currency: Add
+  editing_currency: Edit Currency
+  new_currency: Add Currency
