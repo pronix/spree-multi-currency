@@ -1,38 +1,42 @@
-<div class='toolbar'>
-  <ul class='actions'>
-    <li>
-      <p><%= button_link_to t("add_currency_converter"), new_object_url, :icon => 'add' %></p>
-    </li>
-  </ul>
-  <br class='clear' />
-</div>
-<h1><%= t("currency_converter") %></h1>
+<%= render(:partial => "/spree/admin/shared/configuration_menu") %>
+<% content_for :page_title do %>
+  <%= t(:currency_converter) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t("add_currency_converter"), new_object_url, :icon => 'icon-plus' %>
+  </li>
+<% end %>
 
 <table class="index">
+  <colgroup>
+    <col style="width: 20%">
+    <col style="width: 20%">
+    <col style="width: 20%">
+    <col style="width: 20%">
+    <col style="width: 20%">
+  </colgroup>
   <thead>
-	<tr>
-    <th><%= t("currency_converter_date_req") %></th>
-    <th><%= t("currency_converter_currency") %></th>
-    <th><%= t("currency_converter_nominal") %></th>
-    <th><%= t("currency_converter_value") %></th>
-    <th><%= t("action") %></th>
-	</tr>
+  	<tr>
+      <th><%= t("currency_converter_date_req") %></th>
+      <th><%= t("currency_converter_currency") %></th>
+      <th><%= t("currency_converter_nominal") %></th>
+      <th><%= t("currency_converter_value") %></th>
+  	</tr>
   </thead>
   <tbody>
     <% @currency_converters.each do |currency_converter|%>
-    <tr id="<%= dom_id currency_converter %>">
-      <td><%=  currency_converter.date_req %></td>
-      <td width="350px"><%= currency_converter.currency.try(:name) %></td>
-      <td><%=  currency_converter.nominal %></td>
-      <td><%=  currency_converter.value %></td>
-      <td>
-      	<%= link_to_edit currency_converter %> &nbsp;
-	      <%= link_to_delete currency_converter %> &nbsp;
-      </td>
-    </tr>
+      <tr id="<%= dom_id currency_converter %>">
+        <td><%=  currency_converter.date_req %></td>
+        <td width="350px"><%= currency_converter.currency.try(:name) %></td>
+        <td><%=  currency_converter.nominal %></td>
+        <td><%=  currency_converter.value %></td>
+        <td>
+        	<%= link_to_edit currency_converter %> &nbsp;
+  	      <%= link_to_delete currency_converter %> &nbsp;
+        </td>
+      </tr>
     <% end %>
   </tbody>
 </table>
-
-<%#= paginate @currency_converters %>
-

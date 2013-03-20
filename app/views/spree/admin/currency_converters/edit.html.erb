@@ -1,8 +1,16 @@
-<h1><%= t("editing_currency_converter") %></h1>
+<% content_for :page_title do %>
+  <%= t(:editing_currency_converter) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t("back_to_currency_converters"), collection_url, :icon => 'icon-arrow-left' %>
+  </li>
+<% end %>
+
 <%= form_for(:currency_converter, :url => object_url, :html => { :method => :put }) do |f| %>
-	<%= render :partial => "form", :locals => { :f => f } %>
-	<p class="form-buttons">
-		<%= button t("update") %>
-		<%= link_to t('cancel'), collection_url %>
-	</p>
+	<fieldset class="no-border-top">
+	  <%= render :partial => "form", :locals => { :f => f } %>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
 <% end %>
