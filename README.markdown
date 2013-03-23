@@ -180,6 +180,10 @@ Settings
 
 For tests
 _________________________
+  For start tests require exec:
+  `bundle exec rake test_app && bundle exec rake spec`
+
+
 
   extention require store in ./spree
   in Rakefile defined
