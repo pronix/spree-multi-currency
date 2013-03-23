@@ -1,5 +1,4 @@
 # Spree Multi-Currency
-FIXME For 1.3 require replace `price_in(currency).disaply_price` to `cost_price` in all views in all views
 
 Support different currency and recalculate price from one to another
 
