@@ -1,4 +1,7 @@
-require "money"
+require 'money'
+class OriginMoney < Money
+end
+
 module Spree
   class Currency < ActiveRecord::Base
 
@@ -50,13 +53,14 @@ module Spree
           add_rate(@basic.char_code,   @current.char_code, @rate.nominal/@rate.value.to_f)
           add_rate(@current.char_code, @basic.char_code,   @rate.value.to_f)
         end
-
       end
 
       # Exchanges money between two currencies.
       # E.g. with these args: 150, DKK, GBP returns 16.93
       def convert(value, from, to)
-        ( Money.new(value.to_f * 10000, from).exchange_to(to).to_f / 100).round(2)
+        res = ( OriginMoney.new(value.to_f * 10000, from).exchange_to(to).to_f / 100).round(2)
+        #Rails.logger.info "#{value} #{from} == #{res} #{to}"
+        res
       end
 
       # Converts the basic currency value to a 'localized' value.
@@ -66,7 +70,7 @@ module Spree
         load_rate(options)
         convert(value, @basic.char_code, @current.char_code)
       rescue => ex
-        Rails.logger.error " [ Currency ] :#{ex.inspect}"
+        Rails.logger.error " [ Currency ] :#{ex.inspect} \n #{ex.backtrace.join('\n ')}"
         value
       end
 
@@ -89,7 +93,7 @@ module Spree
 
         convert(value, @current.char_code, @basic.char_code)
       rescue => ex
-        Rails.logger.error " [ Currency ] :#{ex.inspect}"
+        Rails.logger.error " [ Currency ] :#{ex.inspect} \n #{e.backtrace.join('\n ')}"
         value
       end
 
@@ -106,7 +110,7 @@ module Spree
       private
 
       def add_rate(from, to, rate)
-        Money.add_rate(from, to, rate.to_f ) unless Money.default_bank.get_rate(from, to)
+        OriginMoney.add_rate(from, to, rate.to_f )
       end
 
     end

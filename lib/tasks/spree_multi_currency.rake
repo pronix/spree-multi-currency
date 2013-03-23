@@ -3,7 +3,7 @@
 require 'open-uri'
 require 'nokogiri'
 # add custom rake tasks here
-namespace :spree_multi_currencies do
+namespace :spree_multi_currency do
 
   namespace :currency do
     desc "Общероссийский классификатор валют (сокращ. ОКВ) - http://ru.wikipedia.org/wiki/Общероссийский_классификатор_валют"
@@ -56,7 +56,7 @@ namespace :spree_multi_currencies do
 
     desc "Rates from European Central Bank"
     task :ecb, [:load_currencies] => :environment do |t, args|
-      Rake::Task["spree_multi_currencies:currency:iso4217"].invoke if args.load_currencies
+      Rake::Task["spree_multi_currency:currency:iso4217"].invoke if args.load_currencies
       euro  = Spree::Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
       euro.basic!
       url = 'http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml'
@@ -73,7 +73,7 @@ namespace :spree_multi_currencies do
 
     desc "Rates from Google"
     task :google, [:currency, :load_currencies] => :environment do |t, args|
-      Rake::Task["spree_multi_currencies:currency:iso4217"].invoke if args.load_currencies
+      Rake::Task["spree_multi_currency:currency:iso4217"].invoke if args.load_currencies
       default_currency = Spree::Currency.where("char_code = :currency_code or num_code = :currency_code", :currency_code => args.currency.upcase || 978).first ||
                          Spree::Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
       default_currency.basic!
