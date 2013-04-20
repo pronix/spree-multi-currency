@@ -12,8 +12,6 @@ Gem::Specification.new do |s|
   s.homepage    = "http://nanopodcast-pronix.rhcloud.com/"
   s.summary     = %q{spree_multi_currency}
   s.description = %q{spree_multi_currency}
-  s.signing_key = '/home/dima/.gem/keys/gem-private_key.pem'
-  s.cert_chain  = ['/home/dima/.gem/keys/gem-public_cert.pem']
 
   # s.rubyforge_project = "spree-multi-currency"
 
