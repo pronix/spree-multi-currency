@@ -75,24 +75,22 @@ module Spree
       # Usage: Currency.conversion_from_current(100, :locale => "da")
       def conversion_from_current(value, options={})
         load_rate(options)
-
-        # Replace commas with dots as decimal mark for those languages that use this.
-
-        # 2,000.00 => 2000.00
-        value.gsub!(",","") if (value =~ /\,[0-9]+\./)
-
-        # 2.000,00 => 2000.00
-        value.gsub!(".","").gsub!(",",".") if (value =~ /\.[0-9]+\,/)
-
-        # 2000,00 => 2000.00
-        value.gsub!(",","") if (value =~ /\.[0-9]+\,/)
-
-        convert(value, @current.char_code, @basic.char_code)
+        convert(parse_price(value), @current.char_code, @basic.char_code)
       rescue => ex
         Rails.logger.error " [ Currency ] :#{ex.inspect}"
         value
       end
 
+      def parse_price(price)
+        return price unless price.is_a?(String)
+
+        separator, delimiter = I18n.t([:'number.currency.format.separator', :'number.currency.format.delimiter'])
+        non_price_characters = /[^0-9\-#{separator}]/
+        price.gsub!(non_price_characters, '') # strip everything else first
+        price.gsub!(separator, '.') unless separator == '.' # then replace the locale-specific decimal separator with the standard separator if necessary
+
+        price.to_d
+      end
 
       # Retrieves the main currency.
       def basic
