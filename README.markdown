@@ -1,3 +1,10 @@
+# WARNING 
+
+This fork contains a modification in the calculation of the shipping costs which was requested for a specific project. 
+Please check the order_decorator if it fits your needs before using this! 
+
+This should actually be done in the project itself, but for some reason the override doesn't work in production so I am using the lazy way of fixing this. 
+
 # Spree Multi-Currency
 
 Support different currency and recalculate price from one to another
