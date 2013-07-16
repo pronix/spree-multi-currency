@@ -36,9 +36,12 @@ module ActionView
                     end
         end
 
-        begin
+        # FIXME commented code looks like never working
+        # remove it after few monthes
+#        begin
           value = number_with_precision(number, options.merge(raise: true))
           format.gsub(/%n/, value).gsub(/%u/, unit).html_safe
+=begin
         rescue InvalidNumberError => e
           if options[:raise]
             raise
@@ -51,6 +54,7 @@ module ActionView
             end
           end
         end
+=end
 
       end
 
