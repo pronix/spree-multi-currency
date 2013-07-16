@@ -50,8 +50,6 @@ module Spree
         current(options[:locale] || I18n.locale)
         basic
         if @rate = @current.currency_converters.get_rate(options[:date] || Time.now)
-          puts 'finded correct rate'
-          puts "#{@basic.char_code},   #{@current.char_code}, #{@rate.nominal/@rate.value.to_f}"
           add_rate(@basic.char_code,   @current.char_code, @rate.nominal/@rate.value.to_f)
           add_rate(@current.char_code, @basic.char_code,   @rate.value.to_f)
         end

@@ -6,13 +6,19 @@ feature 'Buy' do
   background :each do
     # factories defined in spree/core/lib/spree/testing_support/factories
     # @calculator = create(:calculator)
+    rub = Spree::Currency.create(name: 'rubles', char_code: 'RUB',
+                                 num_code: 623, locale: 'ru', basic: false)
+    usd = Spree::Currency.create(name: 'dollars', char_code: 'USD',
+                                 num_code: 624, locale: 'en', basic: true)
+    Spree::CurrencyConverter.create(nominal: 32, value: 1.0,
+                                    currency: rub, date_req: Time.now)
+    Spree::Config.show_products_without_price = true
     zone = create(:zone, name: 'CountryZone')
     @ship_cat = create(:shipping_category,name: 'all')
 
     @product = create(:base_product, name: 'product1')
     @product.shipping_category = @ship_cat
     @product.save!
-    @product.prices.each {|x| puts x.to_yaml }
     stock = @product.stock_items.first
     stock.adjust_count_on_hand(100)
     stock.save!
@@ -43,7 +49,6 @@ feature 'Buy' do
   scenario 'visit root page' do
     name = @product.name
     visit '/'
-    save_and_open_page
     expect(page).to have_content(name)
     click_link name
     click_button 'add-to-cart-button'
@@ -73,15 +78,7 @@ feature 'Buy' do
     click_button 'Save and Continue'
 
     # payment page
-    fill_in 'social_security_number', with: '410321-9202'
     click_button 'Save and Continue'
-
-    # confirm
-    # FIXME undefined method `authorize' for #<Spree::PaymentMethod::KlarnaInvoice:0x0000000d4c8ee0>
-    # click_button 'Place Order'
-    #
-
-    # as result require receive invoice and check that invoice created in klarna
-    # save_and_open_page
+    expect(page).to have_content('Your order has been processed successfully')
   end
 end
