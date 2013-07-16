@@ -1,9 +1,11 @@
+# Encoding: utf-8
+require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/packagetask'
 require 'rubygems/package_task'
 require 'rspec/core/rake_task'
-require 'spree/core/testing_support/common_rake'
+require 'spree/testing_support/common_rake'
 
 RSpec::Core::RakeTask.new
 

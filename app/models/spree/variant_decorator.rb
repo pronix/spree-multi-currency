@@ -1,11 +1,39 @@
 Spree::Variant.class_eval do
   extend Spree::MultiCurrency
-  multi_currency :price, :cost_price
-  def price_in(currency)
-    # will use internal currency, parametr will ignored
-    currency = Spree::Currency.current
-    prices.select{ |price| price.currency == currency }.first || Spree::Price.new(:variant_id => self.id, :currency => currency, :amount => self.cost_price)
+  multi_currency :cost_price
+
+  # prices stored in spree_prices
+  def price
+    basic = Spree::Currency.basic.char_code
+    price = prices.where(currency: basic).limit(1)[0]
+    if price
+      amount = price.amount
+    else
+      amount = read_attribute(:price) || 0
+    end
+    Spree::Currency.conversion_to_current(amount)
   end
+
+  def base_price
+    price
+  end
+
+  # assign price
+  def price=(value)
+    basic = Spree::Currency.basic.char_code
+    base_price = prices.where(currency: basic).limit(1)[0]
+    value = Spree::Currency.conversion_from_current(value)
+    if base_price
+      base_price.amount = value
+    else
+      if !new_record?
+        prices.create(amount: value,currency: basic)
+      else
+        write_attribute(:price, value)
+      end
+    end
+  end
+
 end
 
 Spree::Money.class_eval do

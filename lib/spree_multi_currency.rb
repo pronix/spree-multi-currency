@@ -12,12 +12,15 @@ module Spree::MultiCurrency
   #  rate_at_date - use the exchange rate at the specified date
   def multi_currency(*args)
     options = args.extract_options!
+
     [args].flatten.compact.each do |number_field|
+
+      # define for example method price
       define_method(number_field.to_sym) do
         if options.has_key?(:rate_at_date) && options[:rate_at_date].is_a?(Proc)
           Spree::Currency.conversion_to_current(
-          	read_attribute(number_field.to_sym),
-          	{ :date => options[:rate_at_date].call(self) }
+            read_attribute(number_field.to_sym),
+            { date: options[:rate_at_date].call(self) }
           )
         else
           Spree::Currency.conversion_to_current(read_attribute(number_field.to_sym))

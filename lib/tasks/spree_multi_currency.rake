@@ -8,6 +8,14 @@ namespace :spree_multi_currency do
   namespace :currency do
     desc "Общероссийский классификатор валют (сокращ. ОКВ) - http://ru.wikipedia.org/wiki/Общероссийский_классификатор_валют"
 
+    task :from_moneylib => :environment do
+      ::Money::Currency.table.each do |x|
+        Spree::Currency.create(char_code: x[1][:iso_code],
+                               name: x[0],
+                               num_code: x[1][:iso_numeric])
+      end
+    end
+
     task :okv => :environment do
       url = "http://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B5%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80_%D0%B2%D0%B0%D0%BB%D1%8E%D1%82"
       data = Nokogiri::HTML.parse(open(url))
