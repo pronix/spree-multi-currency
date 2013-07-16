@@ -47,7 +47,12 @@ feature 'Buy' do
   end
 
   scenario 'visit root page' do
+      # check Spree::Config.show_products_without_price
+    Spree::Config.show_products_without_price = false
     name = @product.name
+    visit '/'
+    expect(page).to have_no_content(name)
+    Spree::Config.show_products_without_price = true
     visit '/'
     expect(page).to have_content(name)
     click_link name

@@ -29,10 +29,6 @@ module Spree::MultiCurrency
         end
       end
 
-      define_method("base_#{number_field}") do
-        read_attribute(number_field.to_sym)
-      end
-
       unless options[:only_read]
         define_method(:"#{number_field}=") do |value|
           write_attribute(number_field.to_sym, Spree::Currency.conversion_from_current(value))

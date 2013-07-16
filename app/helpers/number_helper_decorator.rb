@@ -29,11 +29,15 @@ module ActionView
 
         if number.to_f < 0
           format = options.delete(:negative_format)
+          number = number.abs
+=begin
+looks like number always has method abs
           number =  if number.respond_to?('abs')
                       number.abs
                     else
                       number.sub(/^-/, '')
                     end
+=end
         end
 
         # FIXME commented code looks like never working
