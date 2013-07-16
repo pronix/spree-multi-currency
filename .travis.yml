@@ -1,5 +1,5 @@
 language: ruby
 rvm:
   - 1.9.3
-script: bundle exec rake test_app ; bundle exec rake rspec
+script: bundle exec rake test_app ; bundle exec rspec
 
