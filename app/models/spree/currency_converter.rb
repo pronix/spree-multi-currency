@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Spree
   class CurrencyConverter < ActiveRecord::Base
     belongs_to :currency

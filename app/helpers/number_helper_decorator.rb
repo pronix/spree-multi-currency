@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # Encoding: utf-8
 #
 # redefined default method

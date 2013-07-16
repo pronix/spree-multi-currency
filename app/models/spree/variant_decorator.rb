@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Spree::Variant.class_eval do
   extend Spree::MultiCurrency
   multi_currency :cost_price

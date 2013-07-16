@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # -*- coding: utf-8 -*-
 require 'spree/core'
 require 'spree_multi_currency/engine'

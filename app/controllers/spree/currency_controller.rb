@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Spree
   class CurrencyController < Spree::BaseController
 

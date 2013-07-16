@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # -*- coding: utf-8 -*-
 class CreateCurrencies < ActiveRecord::Migration
   def self.up

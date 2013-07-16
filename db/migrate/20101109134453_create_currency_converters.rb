@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class CreateCurrencyConverters < ActiveRecord::Migration
   def self.up
     create_table :spree_currency_converters do |t|

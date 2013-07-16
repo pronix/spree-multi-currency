@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Given /^the custom taxons and custom products exist$/ do
   Fixtures.reset_cache
   fixtures_folder = File.join(Rails.root.to_s, 'db', 'sample')

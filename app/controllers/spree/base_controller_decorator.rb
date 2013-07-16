@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Spree::BaseController.class_eval do
   before_filter :set_currency
 

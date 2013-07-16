@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module SpreeMultiCurrency
   # mattr_reader :languages
   # @@languages = [:en]

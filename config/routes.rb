@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # Put your extension routes here.
 Spree::Core::Engine.routes.prepend do
   match "currency/:id" => "currency#set", :as => :currency

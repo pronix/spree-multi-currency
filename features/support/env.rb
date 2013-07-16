@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 FEATURES_PATH = File.expand_path('../..', __FILE__)
 # require define path to spree project
 ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
