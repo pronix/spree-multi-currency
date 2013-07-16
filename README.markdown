@@ -1,5 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/pronix/spree-multi-currency/badge.png)](https://coveralls.io/r/pronix/spree-multi-currency)
 
+[![Build Status](https://travis-ci.org/pronix/spree-multi-currency.png)](https://travis-ci.org/pronix/spree-multi-currency])
+
 # Spree Multi-Currency
 
 Support different currency and recalculate price from one to another
