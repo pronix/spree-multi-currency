@@ -37,6 +37,7 @@ describe 'Currencies changing' do
       product.master.price.should eql 123.54
       I18n.locale = 'ru'
       Spree::Currency.current!
+      Rails.logger.info "\t\n"*10
       product.price.should eql 3953.28
       product.master.price.should eql 3953.28
     end

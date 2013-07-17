@@ -52,9 +52,16 @@ feature 'Buy' do
     name = @product.name
     visit '/'
     expect(page).to have_no_content(name)
+
     Spree::Config.show_products_without_price = true
     visit '/'
     expect(page).to have_content(name)
+
+    # check change currency on product page
+    visit '/currency/RUB'
+    expect(page).to have_content('руб')
+    visit '/currency/USD'
+
     click_link name
     click_button 'add-to-cart-button'
     click_button 'checkout-link'
@@ -65,13 +72,13 @@ feature 'Buy' do
     # copy from spree/backend/spec/requests/admin/orders/order_details_spec.rb
     # may will in future require update
     check 'order_use_billing'
-    fill_in 'order_bill_address_attributes_firstname', :with => 'Joe'
-    fill_in 'order_bill_address_attributes_lastname', :with => 'User'
-    fill_in 'order_bill_address_attributes_address1', :with => '7735 Old Georgetown Road'
-    fill_in 'order_bill_address_attributes_address2', :with => 'Suite 510'
-    fill_in 'order_bill_address_attributes_city', :with => 'Bethesda'
-    fill_in 'order_bill_address_attributes_zipcode', :with => '20814'
-    fill_in 'order_bill_address_attributes_phone', :with => '301-444-5002'
+    fill_in 'order_bill_address_attributes_firstname', with: 'Joe'
+    fill_in 'order_bill_address_attributes_lastname', with: 'User'
+    fill_in 'order_bill_address_attributes_address1', with: '7735 Old Georgetown Road'
+    fill_in 'order_bill_address_attributes_address2', with: 'Suite 510'
+    fill_in 'order_bill_address_attributes_city', with: 'Bethesda'
+    fill_in 'order_bill_address_attributes_zipcode', with: '20814'
+    fill_in 'order_bill_address_attributes_phone', with: '301-444-5002'
     within('fieldset#billing') do
       select @country.name , from: 'Country'
 #      select @state.name, from: 'State'

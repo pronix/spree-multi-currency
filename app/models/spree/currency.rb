@@ -48,19 +48,31 @@ module Spree
 
       def load_rate(options= {})
         current(options[:locale] || I18n.locale)
-        basic
-        if @rate = @current.currency_converters.get_rate(options[:date] || Time.now)
-          add_rate(@basic.char_code,   @current.char_code, @rate.nominal/@rate.value.to_f)
-          add_rate(@current.char_code, @basic.char_code,   @rate.value.to_f)
+        load_rate_from(@current.char_code)
+      end
+
+      # load rate for currency(char_code) to basic
+      def load_rate_from(from_char_code)
+        from_cur = Spree::Currency.find_by_char_code(from_char_code)
+        basic = Spree::Currency.basic
+        rate = from_cur.currency_converters.get_rate(Time.now)
+        if rate
+          add_rate(basic.char_code,   from_cur.char_code, rate.nominal/rate.value.to_f)
+          add_rate(from_cur.char_code, basic.char_code,   rate.value.to_f)
         end
       end
 
       # Exchanges money between two currencies.
       # E.g. with these args: 150, DKK, GBP returns 16.93
       def convert(value, from, to)
-        res = ::Money.new(value.to_f * 10000, from).exchange_to(to)
+        begin
+          res = ::Money.new(value.to_f * 10000, from).exchange_to(to)
+        rescue => e
+          load_rate_from(from)
+          res = ::Money.new(value.to_f * 10000, from).exchange_to(Spree::Config.currency)
+          res = ::Money.new(res, Spree::Config.currency).exchange_to(to)
+        end
         res = (res.to_f / 100).round(2)
-        #Rails.logger.info "#{value} #{from} == #{res} #{to}"
         res
       end
 
