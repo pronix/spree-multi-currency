@@ -13,11 +13,12 @@ feature 'Buy' do
     Spree::CurrencyConverter.create(nominal: 32, value: 1.0,
                                     currency: rub, date_req: Time.now)
     Spree::Config.show_products_without_price = true
-    zone = create(:zone, name: 'CountryZone')
+
+    # FIXME looks like created default zone for country factory
+    #zone = create(:zone, name: 'CountryZone')
     @ship_cat = create(:shipping_category,name: 'all')
 
     @product = create(:base_product, name: 'product1')
-    @product.shipping_category = @ship_cat
     @product.save!
     stock = @product.stock_items.first
     stock.adjust_count_on_hand(100)
@@ -32,15 +33,16 @@ feature 'Buy' do
     @country.states_required = false
     @country.save!
     @state = @country.states.create(name: 'Stockholm')
-    zone.members.create(zoneable: @country,zoneable_type: 'Country')
 
     ship_meth=FactoryGirl.create(:shipping_method,
         :calculator_type => 'Spree::Calculator::Shipping::FlatRate',
         :display_on => 'both')
-    ship_meth.zones << zone
-    ship_meth.shipping_categories << @ship_cat
     ship_meth.calculator.preferred_amount = 90
     ship_meth.save!
+    zone = Spree::Zone.first
+    zone.members.create!(zoneable: @country,zoneable_type: 'Country')
+    ship_meth.zones << zone
+    ship_meth.shipping_categories << @ship_cat
 
     # defined in spec/factories/klarna_payment_factory
     @pay_method = create(:payment_method)
@@ -81,7 +83,6 @@ feature 'Buy' do
     fill_in 'order_bill_address_attributes_phone', with: '301-444-5002'
     within('fieldset#billing') do
       select @country.name , from: 'Country'
-#      select @state.name, from: 'State'
     end
 
     click_button 'Save and Continue'

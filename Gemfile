@@ -14,7 +14,7 @@ group :test do
   gem 'factory_girl'
   gem 'ffaker'
   gem 'simplecov'
-  gem 'database_cleaner'
+  gem 'database_cleaner','1.0.1'
   gem 'i18n-spec'
   gem 'launchy'
   gem 'coveralls', require: false

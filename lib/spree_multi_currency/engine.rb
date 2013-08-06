@@ -23,6 +23,10 @@ module SpreeMultiCurrency
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
+
+      Dir[File.join(File.dirname(__FILE__), "../../app/assets/**/**/**.*")].sort.each do |c|
+        Rails.env.production? ? require(c) : load(c)
+      end
     end
 
     # after rails config/initializers loading, setup spree_multi_lingual's language by getting
