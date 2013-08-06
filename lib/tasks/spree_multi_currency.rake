@@ -33,7 +33,7 @@ namespace :spree_multi_currency do
       url = "http://en.wikipedia.org/wiki/ISO_4217"
       data = Nokogiri::HTML.parse(open(url))
       keys = [:char_code, :num_code, :discharge, :name, :countries ]
-      data.css("table:eq(2) tr")[1..-1].map{|d|
+      data.css("table:eq(1) tr")[1..-1].map{|d|
         Hash[*keys.zip(d.css("td").map {|x| x.text.strip }).flatten]
       }.each { |n|
         Spree::Currency.find_by_num_code(n[:num_code]) ||  Spree::Currency.create(n.except(:discharge).except(:countries))
