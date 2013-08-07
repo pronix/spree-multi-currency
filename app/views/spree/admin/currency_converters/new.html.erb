@@ -10,7 +10,7 @@
 
 <%= form_for(:currency_converter, :url => collection_url) do |f| %>
 	<fieldset class="no-border-top">
-	  <%= render :partial => "form", :locals => { :f => f } %>
-    <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+	  <%= render 'form', :f => f %>
+    <%= render 'spree/admin/shared/new_resource_links' %>
   </fieldset>
 <% end %>
