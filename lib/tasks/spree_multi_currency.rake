@@ -82,8 +82,14 @@ namespace :spree_multi_currency do
     desc "Rates from Google"
     task :google, [:currency, :load_currencies] => :environment do |t, args|
       Rake::Task["spree_multi_currency:currency:iso4217"].invoke if args.load_currencies
-      default_currency = Spree::Currency.where("char_code = :currency_code or num_code = :currency_code", :currency_code => args.currency.upcase || 978).first ||
-                         Spree::Currency.get("978", { :num_code => "978", :char_code => "EUR", :name => "Euro"})
+      if args.currency
+        default_currency = Spree::Currency.where('char_code = :currency_code or num_code = :currency_code', currency_code: args.currency.upcase ).first
+      else
+        default_currency = Spree::Currency.get('978',
+                                               { num_code: '978',
+                                                 char_code: 'EUR',
+                                                 name: 'Euro'})
+      end
       default_currency.basic!
       date = Time.now
       puts "Loads currency data from Google using #{default_currency}"
