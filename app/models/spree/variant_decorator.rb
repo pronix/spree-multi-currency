@@ -65,7 +65,7 @@ Spree::Variant.class_eval do
 
   # redefine spree method from spree/core/app/models/spree/variant.rb
   def price_in(currency)
-    if currency.class == String
+    if currency.is_a?(String)
         char_code = currency
     else
         char_code = currency.char_code

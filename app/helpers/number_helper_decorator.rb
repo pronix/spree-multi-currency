@@ -30,35 +30,10 @@ module ActionView
         if number.to_f < 0
           format = options.delete(:negative_format)
           number = number.abs
-=begin
-looks like number always has method abs
-          number =  if number.respond_to?('abs')
-                      number.abs
-                    else
-                      number.sub(/^-/, '')
-                    end
-=end
         end
 
-        # FIXME commented code looks like never working
-        # remove it after few monthes
-#        begin
-          value = number_with_precision(number, options.merge(raise: true))
-          format.gsub(/%n/, value).gsub(/%u/, unit).html_safe
-=begin
-        rescue InvalidNumberError => e
-          if options[:raise]
-            raise
-          else
-            formatted_number = format.gsub(/%n/, e.number).gsub(/%u/, unit)
-            if e.number.to_s.html_safe?
-              formatted_number.html_safe
-            else
-              formatted_number
-            end
-          end
-        end
-=end
+        value = number_with_precision(number, options.merge(raise: true))
+        format.gsub(/%n/, value).gsub(/%u/, unit).html_safe
 
       end
 
