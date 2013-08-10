@@ -86,7 +86,7 @@ module Spree
             res = ::Money.new(value.to_f * 10000, from).exchange_to(Spree::Config.currency)
             res = ::Money.new(res, Spree::Config.currency).exchange_to(to)
           rescue=> e
-            raise 'Require load actual currency'
+            raise "Require load actual currency \t\n #{e}"
           end
         end
         res = (res.to_f / 100).round(2)
