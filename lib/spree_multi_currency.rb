@@ -19,19 +19,22 @@ module Spree::MultiCurrency
 
       # define for example method price
       define_method(number_field.to_sym) do
-        if options.has_key?(:rate_at_date) && options[:rate_at_date].is_a?(Proc)
+        num_field = read_attribute(number_field.to_sym)
+        if options.has_key?(:rate_at_date) &&
+              options[:rate_at_date].is_a?(Proc)
           Spree::Currency.conversion_to_current(
-            read_attribute(number_field.to_sym),
+            num_field,
             { date: options[:rate_at_date].call(self) }
           )
         else
-          Spree::Currency.conversion_to_current(read_attribute(number_field.to_sym))
+          Spree::Currency.conversion_to_current(num_field)
         end
       end
 
       unless options[:only_read]
         define_method(:"#{number_field}=") do |value|
-          write_attribute(number_field.to_sym, Spree::Currency.conversion_from_current(value))
+          write_attribute(number_field.to_sym,
+                          Spree::Currency.conversion_from_current(value))
         end
       end
 
