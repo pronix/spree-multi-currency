@@ -16,6 +16,7 @@ Spree::Variant.class_eval do
     current_price = prices.where(currency: char_code).first
     if current_price && current_price.amount.present?
       amount = current_price.amount
+    Rails.logger.info "\t\n\t\n ammount in get price #{amount}"
       return amount
     else
       basic_price = prices.where(currency: Spree::Currency.basic.try(:char_code))[0]
@@ -64,8 +65,13 @@ Spree::Variant.class_eval do
 
   # redefine spree method from spree/core/app/models/spree/variant.rb
   def price_in(currency)
-    res = prices.select{ |price| price.currency == currency }.first
-    if res.blank?
+    if currency.class == String
+        char_code = currency
+    else
+        char_code = currency.char_code
+    end
+    res = prices.where( currency: char_code ).first
+    if res.blank? || res.amount.nil? || res.amount.to_i == 0
       res = Spree::Price.new(variant_id: self.id,
                              currency: currency,
                              amount: get_price)
