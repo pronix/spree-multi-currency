@@ -9,7 +9,6 @@ Spree::Product.class_eval do
       # should render product with any not null price
       scope = scope.where('spree_prices.amount IS NOT NULL')
     end
-    Rails.logger.info scope.to_yaml
     scope
   end
 

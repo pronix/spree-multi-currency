@@ -45,11 +45,6 @@ RSpec.configure do |config|
   config.extend Spree::TestingSupport::AuthorizationHelpers::Request, type: :feature
 
   config.before do
-#    if example.metadata[:js]
-#      DatabaseCleaner.strategy = :truncation
-#    else
-#      DatabaseCleaner.strategy = :transaction
-#    end
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.start
   end

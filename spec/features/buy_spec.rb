@@ -6,11 +6,13 @@ feature 'Buy' do
   background :each do
     # factories defined in spree/core/lib/spree/testing_support/factories
     # @calculator = create(:calculator)
+    Spree::Config.currency = 'USD'
     rub = Spree::Currency.create(name: 'rubles', char_code: 'RUB',
                                  num_code: 623, locale: 'ru', basic: false)
     usd = Spree::Currency.create(name: 'dollars', char_code: 'USD',
                                  num_code: 624, locale: 'en', basic: true)
-    Spree::CurrencyConverter.create(nominal: 32, value: 1.0,
+
+    Spree::CurrencyConverter.create!(nominal: 32, value: 1.0,
                                     currency: rub, date_req: Time.now)
     Spree::Config.show_products_without_price = true
 
@@ -49,7 +51,11 @@ feature 'Buy' do
   end
 
   scenario 'visit root page' do
-      # check Spree::Config.show_products_without_price
+    # check Spree::Config.show_products_without_price
+    @product.prices.each do |price|
+      price.amount = nil
+      price.save!
+    end
     Spree::Config.show_products_without_price = false
     name = @product.name
     visit '/'

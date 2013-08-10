@@ -13,6 +13,7 @@ describe 'Currencies changing' do
         @usd = Spree::Currency.create(name: 'dollars', char_code: 'USD',
                                  num_code: 624, locale: 'en', basic: true)
         Spree::CurrencyConverter.add(@rub, Time.now, 1.0, 32.0)
+        @shipping_category = create(:shipping_category)
     end
 
     it 'changes price when changing locale' do
@@ -30,7 +31,9 @@ describe 'Currencies changing' do
     it 'check save master_price' do
       I18n.locale = 'en'
       Spree::Currency.current!
-      product = Spree::Product.new(name: 'test123', price: 123.54)
+      product = Spree::Product.new( name: 'test123',
+                                    price: 123.54)
+      product.shipping_category = @shipping_category
       product.save!
       product.reload
       product.price.should eql 123.54
