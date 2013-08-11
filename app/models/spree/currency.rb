@@ -84,7 +84,7 @@ module Spree
         if rate
           add_rate(basic.char_code,
                    from_cur.char_code,
-                   rate.nominal / rate.value.to_f)
+                   rate.nominal/rate.value.to_f)
           add_rate(from_cur.char_code,
                    basic.char_code,
                    rate.value.to_f)
@@ -101,7 +101,10 @@ module Spree
           load_rate_from(from)
           begin
             res = from_money.exchange_to(Spree::Config.currency)
+            puts "to usd = #{res}"
+            load_rate_from(to)
             res = ::Money.new(res, Spree::Config.currency).exchange_to(to)
+            puts "to eur = #{res}"
           rescue => e
             raise "Require load actual currency \t\n #{e}"
           end
@@ -137,20 +140,6 @@ module Spree
       def error_logger(ex)
         mes = " [ Currency ] :#{ex.inspect} \n #{ex.backtrace.join('\n ')}"
         Rails.logger.error mes
-      end
-
-      def parse_price(price)
-        return price unless price.is_a?(String)
-
-        separator = I18n.t([:'number.currency.format.separator'])
-        delimiter = I18n.t([:'number.currency.format.delimiter'])
-        non_price_characters = /[^0-9\-#{separator}]/
-        price.gsub!(non_price_characters, '') # strip everything else first
-        # then replace the locale-specific decimal separator with the
-        # standard separator if necessary
-        price.gsub!(separator.to_s, '.') unless separator == '.'
-
-        price.to_d
       end
 
       # Retrieves the main currency.
