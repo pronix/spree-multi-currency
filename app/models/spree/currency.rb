@@ -121,7 +121,7 @@ module Spree
         value
       end
 
-      # Converts the currency value of the current locale to the basic currency.
+      # Converts the currency value of the current locale to the basic currency
       # In the parameters you can specify the locale you wish to convert FROM.
       # Usage: Currency.conversion_from_current(100, :locale => "da")
       def conversion_from_current(value, options = {})
@@ -146,7 +146,9 @@ module Spree
         delimiter = I18n.t([:'number.currency.format.delimiter'])
         non_price_characters = /[^0-9\-#{separator}]/
         price.gsub!(non_price_characters, '') # strip everything else first
-        price.gsub!(separator, '.') unless separator == '.' # then replace the locale-specific decimal separator with the standard separator if necessary
+        # then replace the locale-specific decimal separator with the
+        # standard separator if necessary
+        price.gsub!(separator, '.') unless separator == '.'
 
         price.to_d
       end
@@ -156,7 +158,7 @@ module Spree
         @basic ||= where(basic: true).first
       end
 
-      def get(num_code, options ={ })
+      def get(num_code, options = {})
         find_by_num_code(num_code) || create(options)
       end
 

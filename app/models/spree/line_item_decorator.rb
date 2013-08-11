@@ -4,16 +4,20 @@ Spree::LineItem.class_eval do
 
   # redefine spree/core/app/models/spree/line_item.rb
   def single_money
-    current_currency = Spree::Currency.current
-    price_in_current_currency = Spree::Currency.convert(price,currency,current_currency.char_code)
-    Spree::Money.new(price_in_current_currency, { currency: current_currency })
+    calculate_money(price)
   end
 
   # redefine spree/core/app/models/spree/line_item.rb
   def money
-    current_currency = Spree::Currency.current
-    amount_in_current_currency = Spree::Currency.convert(amount,currency,current_currency.char_code)
-    Spree::Money.new(amount_in_current_currency, { currency: current_currency })
+    calculate_money(amount)
+  end
+
+  def calculate_money(var)
+    current_cur = Spree::Currency.current
+    var_in_current_currency = Spree::Currency.convert(var,
+                                                      currency,
+                                                      current_cur.char_code)
+    Spree::Money.new(var_in_current_currency, { currency: current_cur })
   end
 
   alias display_total money

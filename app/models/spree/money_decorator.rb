@@ -11,5 +11,5 @@ Spree::Money.class_eval do
       @options.merge!(options)
       # Must be a symbol because the Money gem doesn't do the conversion
       @options[:symbol_position] = @options[:symbol_position].to_sym
-    end
+  end
 end
