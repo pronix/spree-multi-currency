@@ -148,7 +148,7 @@ module Spree
         price.gsub!(non_price_characters, '') # strip everything else first
         # then replace the locale-specific decimal separator with the
         # standard separator if necessary
-        price.gsub!(separator, '.') unless separator == '.'
+        price.gsub!(separator.to_s, '.') unless separator == '.'
 
         price.to_d
       end

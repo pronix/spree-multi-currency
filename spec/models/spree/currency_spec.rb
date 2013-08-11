@@ -25,4 +25,14 @@ describe Spree::Currency do
     Spree::Currency.error_logger(ex)
   end
 
+  it 'get currency by num code' do
+    Spree::Currency.get(623).should == @rub
+  end
+
+  it 'parse price as string' do
+    res = Spree::Currency.parse_price('$1.23')
+    res.class.should == BigDecimal
+    res.should == BigDecimal('1.23')
+  end
+
 end
