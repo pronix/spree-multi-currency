@@ -12,7 +12,7 @@ feature 'Buy' do
     usd = Spree::Currency.create(name: 'dollars', char_code: 'USD',
                                  num_code: 624, locale: 'en', basic: true)
 
-    Spree::CurrencyConverter.create!(nominal: 32, value: 1.0,
+    Spree::CurrencyConverter.create!(nominal: 1.0, value: 32.0,
                                     currency: rub, date_req: Time.now)
     Spree::Config.show_products_without_price = true
 

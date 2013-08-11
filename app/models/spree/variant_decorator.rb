@@ -16,17 +16,18 @@ Spree::Variant.class_eval do
     current_price = prices.where(currency: char_code).first
     if current_price && current_price.amount.present?
       amount = current_price.amount
-    Rails.logger.info "\t\n\t\n ammount in get price #{amount}"
       return amount
     else
-      basic_price = prices.where(currency: Spree::Currency.basic.try(:char_code))[0]
+      basic_char = Spree::Currency.basic.try(:char_code)
+      basic_price = prices.where(currency: basic_char).first
       if basic_price
         amount = basic_price.amount
         return Spree::Currency.conversion_to_current(amount)
       else
         spree_price = prices.first
         amount = spree_price.amount
-        return Spree::Currency.convert(amount, spree_price.currency, char_code)
+        res = Spree::Currency.convert(amount, spree_price.currency, char_code)
+        return res
       end
     end
   end
