@@ -1,7 +1,7 @@
 Spree::Money.class_eval do
 
-  def initialize(amount, options={})
-      @money = ::Money.parse([amount, (Spree::Currency.current.char_code )].join)
+  def initialize(amount, options = {})
+      @money = ::Money.parse([amount, Spree::Currency.current.char_code].join)
       @options = {}
       @options[:with_currency] = Spree::Config[:display_currency]
       @options[:symbol_position] = Spree::Config[:currency_symbol_position].to_sym
