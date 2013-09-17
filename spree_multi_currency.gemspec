@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://nanopodcast-pronix.rhcloud.com/"
   s.summary     = %q{spree_multi_currency}
   s.description = %q{spree_multi_currency}
+  s.license     = 'MIT'
 
   # s.rubyforge_project = "spree-multi-currency"
 
