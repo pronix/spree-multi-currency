@@ -28,6 +28,7 @@ Load up the list of all international currencies with corresponding codes:
 
 This step is not obligatory, i.e. you can manually fill up the 'currencies' table, but it's more practical to load the list with rake task above (and be sure the codes are OK), and then remove the currencies you don't want to support.
 
+Raketasks will set 'locale' automatically for the currencies USD, EUR, RUB. For other currencies you have to do this manually.
 
 If you want get amount in base currency use base_total
 
@@ -158,47 +159,47 @@ Settings
 
 Формат вывода валюты
 --------------------
- Формат для валюты прописан в локализации, для каждой валюты нужно описать свою локализацию (прописаны eur, usd, rub):
- Пример для usd, eur
-  ---
-  currency_USD: &usd
-    number:
-      currency:
-        format:
-          format: "%u%n"
-          unit: "$"
-          separator: "."
-          delimiter: ","
-          precision: 2
-          significant: false
-          strip_insignificant_zeros: false
+Формат для валюты прописан в локализации, для каждой валюты нужно описать свою локализацию (прописаны eur, usd, rub):
+Пример для usd, eur
 
-  currency_EUR:
-    <<: *usd
-    number:
-      currency:
-        format:
-          format: "%u%n"
-          unit: "€"
+    --
+    currency_USD: &usd
+      number:
+        currency:
+          format:
+            format: "%u%n"
+            unit: "$"
+            separator: "."
+            delimiter: ","
+            precision: 2
+            significant: false
+            strip_insignificant_zeros: false
+
+    currency_EUR:
+      <<: *usd
+      number:
+        currency:
+          format:
+            format: "%u%n"
+            unit: "€"
 
 
 For tests
-_________________________
-  For start tests require exec:
-  `bundle exec rake test_app && bundle exec rake spec`
+---------
+For start tests require exec:
+`bundle exec rake test_app && bundle exec rake spec`
 
+extention require store in ./spree
+in Rakefile defined
 
-
-  extention require store in ./spree
-  in Rakefile defined
-  # require define path to spree project
-  ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
-  # or define spree as gem in Gemfile
-  # and decomment this
-  # gemfile = Pathname.new("Gemfile").expand_path
-  # lockfile = gemfile.dirname.join('Gemfile.lock')
-  # definition = Bundler::Definition.build(gemfile, lockfile, nil)
-  # sc=definition.index.search "spree"
-  # ENV['SPREE_GEM_PATH'] = sc[0].loaded_from.gsub(/\/[a-z_]*.gemspec$/,'')
+    # require define path to spree project
+    ENV['SPREE_GEM_PATH'] = "/home/dima/project/spree"
+    # or define spree as gem in Gemfile
+    # and decomment this
+    # gemfile = Pathname.new("Gemfile").expand_path
+    # lockfile = gemfile.dirname.join('Gemfile.lock')
+    # definition = Bundler::Definition.build(gemfile, lockfile, nil)
+    # sc=definition.index.search "spree"
+    # ENV['SPREE_GEM_PATH'] = sc[0].loaded_from.gsub(/\/[a-z_]*.gemspec$/,'')
 
 
