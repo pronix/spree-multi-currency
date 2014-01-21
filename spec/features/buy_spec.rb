@@ -13,12 +13,12 @@ feature 'Buy' do
                                  num_code: 624, locale: 'en', basic: true)
 
     Spree::CurrencyConverter.create!(nominal: 1.0, value: 32.0,
-                                    currency: rub, date_req: Time.now)
+                                     currency: rub, date_req: Time.now)
     Spree::Config.show_products_without_price = true
 
     # FIXME looks like created default zone for country factory
-    #zone = create(:zone, name: 'CountryZone')
-    @ship_cat = create(:shipping_category,name: 'all')
+    # zone = create(:zone, name: 'CountryZone')
+    @ship_cat = create(:shipping_category, name: 'all')
 
     @product = create(:base_product, name: 'product1')
     @product.save!
@@ -31,20 +31,21 @@ feature 'Buy' do
                       name: 'Sweden',
                       iso: 'SE',
                       iso3: 'SE',
-                      numcode: 46 )
+                      numcode: 46)
     @country.states_required = false
     @country.save!
     @state = @country.states.create(name: 'Stockholm')
 
-    ship_meth=FactoryGirl.create(:shipping_method,
-        :calculator_type => 'Spree::Calculator::Shipping::FlatRate',
-        :display_on => 'both')
+    ship_meth = FactoryGirl.create(:shipping_method,
+                                   calculator_type:
+                                       'Spree::Calculator::Shipping::FlatRate',
+                                   display_on: 'both')
     ship_meth.calculator.preferred_amount = 90
     ship_meth.save!
     zone = Spree::Zone.first
-    zone.members.create!(zoneable: @country,zoneable_type: 'Country')
+    zone.members.create!(zoneable: @country, zoneable_type: 'Spree::Country')
     ship_meth.zones << zone
-    ship_meth.shipping_categories << @ship_cat
+    # ship_meth.shipping_categories << @ship_cat
 
     # defined in spec/factories/klarna_payment_factory
     @pay_method = create(:payment_method)
@@ -82,7 +83,8 @@ feature 'Buy' do
     check 'order_use_billing'
     fill_in 'order_bill_address_attributes_firstname', with: 'Joe'
     fill_in 'order_bill_address_attributes_lastname', with: 'User'
-    fill_in 'order_bill_address_attributes_address1', with: '7735 Old Georgetown Road'
+    fill_in 'order_bill_address_attributes_address1',
+            with: '7735 Old Georgetown Road'
     fill_in 'order_bill_address_attributes_address2', with: 'Suite 510'
     fill_in 'order_bill_address_attributes_city', with: 'Bethesda'
     fill_in 'order_bill_address_attributes_zipcode', with: '20814'

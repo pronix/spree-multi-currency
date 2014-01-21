@@ -7,6 +7,14 @@
 module ActionView
   module Helpers
     module NumberHelper
+      DEFAULT_CURRENCY_VALUES = { format: '%u%n',
+                                  negative_format: '-%u%n',
+                                  unit: '$',
+                                  separator: '.',
+                                  delimiter: ',',
+                                  precision: 2,
+                                  significant: false,
+                                  strip_insignificant_zeros: false }
 
       def number_to_currency(number, options = {})
         return nil if number.nil?

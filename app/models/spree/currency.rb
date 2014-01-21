@@ -7,15 +7,15 @@ module Spree
 
     has_many :currency_converters do
       def get_rate(date)
-        last(conditions: ["date_req <= ?", date])
+        where('date_req <= ?', date).last
       end
     end
 
-    default_scope order: 'spree_currencies.locale'
-    scope :locale, lambda { |str| where("locale like ?", "%#{str}%") }
+    default_scope { order('spree_currencies.locale') }
+    scope :locale, ->(str) { where('locale like ?', "%#{str}%") }
     after_save :reset_basic_currency
 
-    attr_accessible :basic, :locale, :char_code, :num_code, :name
+    # attr_accessible :basic, :locale, :char_code, :num_code, :name
 
     # FIXME must be transaction
     def basic!
@@ -84,7 +84,7 @@ module Spree
         if rate
           add_rate(basic.char_code,
                    from_cur.char_code,
-                   rate.nominal/rate.value.to_f)
+                   rate.nominal / rate.value.to_f)
           add_rate(from_cur.char_code,
                    basic.char_code,
                    rate.value.to_f)
@@ -105,7 +105,7 @@ module Spree
             res = from_money.exchange_to(currency_config)
             load_rate_from(to)
             res = ::Money.new(res, currency_config).exchange_to(to)
-            res = res.to_f
+            res = (res.to_f / 100).round(2)
           rescue => e
             raise "Require load actual currency \t\n #{e}"
           end
