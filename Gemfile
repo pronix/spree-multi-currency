@@ -18,7 +18,6 @@ group :test do
   gem 'coveralls', require: false
   gem 'sass'
   gem 'coffee-script'
-  gem 'pry-byebug'
 end
 
 gem 'spree', github: 'spree/spree', branch: '2-1-stable'
