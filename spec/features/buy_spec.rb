@@ -111,8 +111,6 @@ feature 'Buy' do
 
      name = @product.name
      click_link name
-     require 'pry'
-     binding.pry
      expect(page).to have_content(variant.options_text)
    end
 end
