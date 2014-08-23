@@ -2,6 +2,12 @@
 
 Spree::Product.class_eval do
 
+   def variants_and_option_values(current_currency = nil)
+     variants.includes(:option_values).select do |variant|
+       variant.option_values.any?
+     end
+   end
+
   # Can't use add_search_scope for this as it needs a default argument
   def self.available(available_on = nil, currency = nil)
     scope = joins(:master => :prices).where("#{Spree::Product.quoted_table_name}.available_on <= ?", available_on || Time.now)
