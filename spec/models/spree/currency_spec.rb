@@ -9,7 +9,7 @@ describe Spree::Currency do
 
     it 'set basic' do
       @rub.basic!
-      @rub.basic.should be_true
+      @rub.basic.should be_truthy
     end
 
     it 'should return locale without spliting' do
@@ -33,7 +33,7 @@ describe Spree::Currency do
 
   describe 'error if' do
     it 'did not load and set default currency' do
-      I18n.locale = nil
+#      I18n.locale = nil
       Spree::Currency.current!
       error_message = 'Require load and set default currency'
       error_message << '<br/>Locale field is factor for determine '

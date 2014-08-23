@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'sqlite3'
 
 group :test do
-  gem 'rspec-rails', '>= 2.6.1'
+  gem 'rspec-rails', '>= 2.6.1', '<3.0.0'
   gem 'factory_girl'
   gem 'therubyracer'
   gem 'execjs'
@@ -16,8 +16,10 @@ group :test do
   gem 'i18n-spec'
   gem 'launchy'
   gem 'coveralls', require: false
-  gem 'sass'
+  gem 'sass', '=3.2.9'
+  gem 'sass-rails','=4.0.2'
   gem 'coffee-script'
+  gem 'sprockets', '=2.11.0'
 end
 
 gem 'spree', github: 'spree/spree', branch: '2-1-stable'
