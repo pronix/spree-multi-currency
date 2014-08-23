@@ -45,16 +45,16 @@ module Spree
 
     class << self
 
-        # return array of all char_codes
-        def all_currencies
-            all.map(&:char_code)
-        end
+      # return array of all char_codes
+      def all_currencies
+        all.map(&:char_code)
+      end
 
       # Get the current locale
       def current(current_locale = nil)
         @current ||= locale(current_locale || I18n.locale).first
         if @current
-          return @current
+          @current
         else
           mess = 'Require load and set default currency'
           mess << '<br/>'

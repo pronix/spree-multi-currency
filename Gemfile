@@ -20,6 +20,7 @@ group :test do
   gem 'sass-rails','=4.0.2'
   gem 'coffee-script'
   gem 'sprockets', '=2.11.0'
+  gem 'pry-byebug'
 end
 
 gem 'spree', github: 'spree/spree', branch: '2-1-stable'

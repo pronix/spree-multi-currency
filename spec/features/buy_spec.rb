@@ -102,8 +102,7 @@ feature 'Buy' do
     click_button 'Save and Continue'
     expect(page).to have_content('Your order has been processed successfully')
   end
-  
-  
+
   scenario 'shows variants in different currency' do
      variant = create(:variant, product: @product)
 
@@ -112,6 +111,8 @@ feature 'Buy' do
 
      name = @product.name
      click_link name
+     require 'pry'
+     binding.pry
      expect(page).to have_content(variant.options_text)
    end
 end

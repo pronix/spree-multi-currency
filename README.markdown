@@ -23,12 +23,11 @@ Load currencies:
 ---------------
 Load up the list of all international currencies with corresponding codes:
 
-    rake spree_multi_currency:currency:iso4217         # Load currency ISO4217 table from Wikipedia http://en.wikipedia.org/wiki/ISO_4217
-    rake spree_multi_currency:currency:okv             # Central Bank of Russian Federation
+    bundle exec rake spree_multi_currency:currency:from_moneylib
 
 This step is not obligatory, i.e. you can manually fill up the 'currencies' table, but it's more practical to load the list with rake task above (and be sure the codes are OK), and then remove the currencies you don't want to support.
 
-Raketasks will set 'locale' automatically for the currencies USD, EUR, RUB. For other currencies you have to do this manually.
+Rake tasks will set 'locale' automatically for the currencies USD, EUR, RUB. For other currencies you have to do this manually.
 
 If you want get amount in base currency use base_total
 
@@ -47,14 +46,6 @@ After setting the basic currency, time to load the rates using one of the rake t
 2. Rates from European Central Bank. These assume Euro is your basic currency:
 
         rake spree_multi_currency:rates:ecb
-
-3. Rates from Google.
-
-        rake spree_multi_currency:rates:google[currency]
-
-The argument in square brackets is the iso code of your basic currency, so to load rates when US Dollar is your basic currency, use
-
-        rake spree_multi_currency:rates:google[usd]
 
 There's also an optional square-bracket-enclosed parameter "load_currencies" for :rates tasks above, but it just loads up currencies table from Wikipedia, so is not needed at this point.
 
@@ -123,15 +114,12 @@ Run
 
 Load currencies:
 ---------------
-    rake spree_multi_currency:currency:iso4217         # Load currency ISO4217 http://en.wikipedia.org/wiki/ISO_4217
-    rake spree_multi_currency:currency:okv             # Общероссийский классификатор валют...
+    rake spree_multi_currency:currency:from_moneylib
 
 Load rates:
 ----------
     rake spree_multi_currency:rates:cbr                               # Курс Сбербанка РФ http://www.cbr.ru
     rake "spree_multi_currency:rates:ecb[load_currencies]"              # Rates from European Central Bank
-  for example     rake spree_multi_currency:rates:google[USD]
-    rake "spree_multi_currency:rates:google[currency,load_currencies]"  # Rates from Google
 
 
 Settings
