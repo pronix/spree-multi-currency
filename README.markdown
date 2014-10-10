@@ -37,6 +37,8 @@ Load rates:
 
 Basic currency is also the one considered to be stored as product prices, shipment rates etc., from which all the other ones will be calculated using the rates.
 
+If you use the rake tasks to update rates and using other basic currency (e.g. cbr bank with USD basic, or ecb bank with HKD basic), the rake tasks will calculate the exchange rates for you.  This allow you using basic different than RUB or EUR with periodic updates.
+
 After setting the basic currency, time to load the rates using one of the rake tasks below. There are three sources of conversion rates supported by this extension:
 
 1. Rates from Central Bank of Russian Federation http://www.cbr.ru. These assume Russian Ruble is your basic currency:
