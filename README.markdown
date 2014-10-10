@@ -51,6 +51,7 @@ After setting the basic currency, time to load the rates using one of the rake t
 
 There's also an optional square-bracket-enclosed parameter "load_currencies" for :rates tasks above, but it just loads up currencies table from Wikipedia, so is not needed at this point.
 
+
 Settings
 ---------
 In Spree Admin Panel, Configuration tab, two new options appear: Currency Settings and Currency Converters.
@@ -66,6 +67,17 @@ Self-explanatory:
 
     http://[domain]/currency/[isocode]
     <%= link_to "eur", currency_path(:eur) %>
+
+    
+Redirection After Change Currency:
+----------
+The redirection after setting currency can be overrided by decorator. e.g.
+
+    Spree::CurrencyController.class_eval do
+      def after_set_currency_path
+        (current_user && stored_location_for(current_user)) || request.referer || main_app.root_path
+      end
+    end
 
 
 Translation files

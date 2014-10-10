@@ -14,8 +14,11 @@ module Spree
         flash[:error] = t(:currency_not_found)
       end
 
-      redirect_back_or_default(root_path)
+      redirect_to after_set_currency_path
     end
 
+    def after_set_currency_path
+      root_path
+    end
   end
 end
