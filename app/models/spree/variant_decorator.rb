@@ -51,12 +51,15 @@ Spree::Variant.class_eval do
   # if new record - save to attribute
   # if saved - create price
   def price=(value)
+
     @price = value
+    
     unless new_record?
       cur = current_char_code
       base_price = prices.where(currency: cur).first
       if base_price
         base_price.amount = value
+        
       else
         prices.new(amount: value, currency: cur)
       end
@@ -80,7 +83,7 @@ Spree::Variant.class_eval do
     res
   end
 
-  private
+  #private
 
   def save_price
     char_code = current_char_code
@@ -93,5 +96,6 @@ Spree::Variant.class_eval do
         spree_price.amount.present?)
       spree_price.save!
     end
+
   end
 end
