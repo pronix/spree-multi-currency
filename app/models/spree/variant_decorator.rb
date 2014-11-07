@@ -51,7 +51,7 @@ Spree::Variant.class_eval do
   # if new record - save to attribute
   # if saved - create price
   def price=(value)
-    value= value.gsub(',','').strip if value
+    value= value.gsub(',','').strip if value && value.class == 'String'
     @price = value
     
     unless new_record?

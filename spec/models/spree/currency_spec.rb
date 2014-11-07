@@ -29,10 +29,24 @@ describe Spree::Currency do
     it 'get currency by num code' do
       Spree::Currency.get(623).should == @rub
     end
+
+
+  
+    it 'load basic currency is not set' do
+      basic = @rub
+      basic.basic!
+      
+      
+      Spree::Currency.current!
+
+      expect(Spree::Currency.current).to eq(basic)
+
+    end
   end
 
   describe 'error if' do
-    it 'did not load and set default currency' do
+    it 'did not load and set default currency and basic not set' do
+      Spree::Currency.remove_all_basic
 #      I18n.locale = nil
       Spree::Currency.current!
       error_message = 'Require load and set default currency'

@@ -43,7 +43,13 @@ module Spree
       end
     end
 
+
     class << self
+
+      def remove_all_basic
+        self.where("basic = ?", true).update_all(basic: false)
+        @basic = nil
+      end
 
       # return array of all char_codes
       def all_currencies
