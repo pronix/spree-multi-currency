@@ -75,7 +75,7 @@ PATH
       json (>= 1.5.1)
       money (>= 5.0.0)
       nokogiri (>= 1.4.4)
-      spree_core (>= 2.4.0.rc3)
+      spree_core (~> 2.4.0.rc3)
 
 GEM
   remote: https://rubygems.org/
