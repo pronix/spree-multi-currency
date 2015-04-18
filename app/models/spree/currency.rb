@@ -43,7 +43,13 @@ module Spree
       end
     end
 
+
     class << self
+
+      def remove_all_basic
+        self.where("basic = ?", true).update_all(basic: false)
+        @basic = nil
+      end
 
       # return array of all char_codes
       def all_currencies
@@ -52,7 +58,7 @@ module Spree
 
       # Get the current locale
       def current(current_locale = nil)
-        @current ||= locale(current_locale || I18n.locale).first
+        @current ||= locale(current_locale || I18n.locale).first  || basic
         if @current
           @current
         else
@@ -129,7 +135,7 @@ module Spree
       # Usage: Currency.conversion_from_current(100, :locale => "da")
       def conversion_from_current(value, options = {})
         load_rate(options)
-        convert(parse_price(value), @current.char_code, @basic.char_code)
+        convert(Monetize.parse(value), @current.char_code, @basic.char_code)
       rescue => ex
         error_logger(ex)
         value

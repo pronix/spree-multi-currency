@@ -37,6 +37,8 @@ Load rates:
 
 Basic currency is also the one considered to be stored as product prices, shipment rates etc., from which all the other ones will be calculated using the rates.
 
+If you use the rake tasks to update rates and using other basic currency (e.g. cbr bank with USD basic, or ecb bank with HKD basic), the rake tasks will calculate the exchange rates for you.  This allow you using basic different than RUB or EUR with periodic updates.
+
 After setting the basic currency, time to load the rates using one of the rake tasks below. There are three sources of conversion rates supported by this extension:
 
 1. Rates from Central Bank of Russian Federation http://www.cbr.ru. These assume Russian Ruble is your basic currency:
@@ -48,6 +50,7 @@ After setting the basic currency, time to load the rates using one of the rake t
         rake spree_multi_currency:rates:ecb
 
 There's also an optional square-bracket-enclosed parameter "load_currencies" for :rates tasks above, but it just loads up currencies table from Wikipedia, so is not needed at this point.
+
 
 Settings
 ---------
@@ -64,6 +67,17 @@ Self-explanatory:
 
     http://[domain]/currency/[isocode]
     <%= link_to "eur", currency_path(:eur) %>
+
+    
+Redirection After Change Currency:
+----------
+The redirection after setting currency can be overrided by decorator. e.g.
+
+    Spree::CurrencyController.class_eval do
+      def after_set_currency_path
+        (current_user && stored_location_for(current_user)) || request.referer || main_app.root_path
+      end
+    end
 
 
 Translation files

@@ -5,22 +5,23 @@ module SpreeMultiCurrency
       class_option :auto_run_migrations, type: :boolean, default: true
 
       def add_javascripts
-        append_file 'app/assets/javascripts/store/all.js',
-                    "//= require store/spree_frontend\n"
-        append_file 'app/assets/javascripts/admin/all.js',
-                    "//= require admin/spree_backend\n"
+       frontend_js_file = "app/assets/stylesheets/spree/frontend.js"
+        
+        if  File.exist?(frontend_js_file)
+          append_file frontend_js_file, "//= require spree/frontend/spree_multi_currency\n"
+        end
+       
+      end
+      
+      def add_stylesheets
+        frontend_css_file = "app/assets/stylesheets/spree/frontend.css"
+        
+        if  File.exist?(frontend_css_file)
+          inject_into_file frontend_css_file, " *= require spree/frontend/spree_multi_currency\n", :before => /\*\//, :verbose => true
+          
+        end
       end
 
-      def add_stylesheets
-        inject_into_file  'app/assets/stylesheets/store/all.css',
-                          " *= require store/spree_frontend\n",
-                          before: /\*\//,
-                          verbose: true
-        inject_into_file  'app/assets/stylesheets/admin/all.css',
-                          " *= require admin/spree_backend\n",
-                          before: /\*\//,
-                          verbose: true
-      end
 
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_multi_currency'
